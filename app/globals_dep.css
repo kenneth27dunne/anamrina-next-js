@@ -1,0 +1,201 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #0130b5; 
+  --color-primary-light: color-mix(in srgb, var(--color-primary), white 20%);
+  --color-primary-lighter: color-mix(in srgb, var(--color-primary), white 35%);
+  --color-primary-dark: color-mix(in srgb, var(--color-primary), black 20%);
+}
+
+
+
+/* base styles */
+
+html, body {
+  @apply text-[#222222];
+}
+h1, h2 {
+  @apply text-lg;
+}
+main, .container {
+  @apply 
+  max-w-7xl 
+  my-12 
+  mx-auto 
+  px-4
+  sm:px-8;
+}
+main > h2 {
+  @apply mb-4 pb-2 text-base ;
+}
+p > a {
+  @apply text-primary underline;
+}
+
+
+
+@import "./styles/navbar.css";
+/* button styles */
+.btn {
+  @apply 
+    px-8 py-3 
+    rounded-xl 
+    text-center
+    font-medium
+    border-2 border-primary
+}
+.btn:hover {
+  @apply bg-opacity-90;
+}
+.btn-primary {
+  @apply bg-primary text-white;
+}
+.btn-secondary {
+  @apply 
+    border-2 
+    border-primary
+    text-primary
+    bg-white
+}
+.btn-lg {
+  @apply
+    px-7 py-4
+    md:px-10 md:py-5 
+    font-bold
+    xs:text-lg
+    w-4/5
+    xs:mx-4 xs:my-auto
+    mx-auto
+    my-3
+    xs:w-auto
+}
+
+/* form styles */
+form {
+  @apply 
+    py-4 px-7 
+    bg-primary 
+    bg-opacity-5 
+    rounded-md 
+    block 
+    mx-auto 
+    min-w-fit w-1/4;
+}
+form label {
+  @apply block;
+}
+form input,
+form textarea,
+form select {
+  @apply 
+    block 
+    mt-2 my-4 px-2 py-1 
+    rounded-sm w-full;
+}
+form button {
+  @apply block mx-auto;
+}
+
+/* feedback styles */
+.error {
+  @apply 
+    border-2 
+    border-red-500 
+    bg-red-300
+    text-red-800 
+    py-1 px-2 
+    rounded-sm
+    block
+    max-w-fit
+    my-4 mx-auto;
+}
+
+/* pill styles */
+.pill {
+  @apply 
+    py-1 px-2 mt-3
+    inline-block 
+    text-xs font-semibold;
+}
+
+
+/* hero */
+.hero-bg {
+
+  z-index: -1;
+}
+
+/* Ensure all cards have equal height */
+.info-card {
+  @apply flex flex-col justify-between border border-[#B2B2B2] bg-white 
+    bg-cover rounded-[15px] p-5 flex-grow transition-all duration-300 cursor-pointer 
+    min-h-full;
+}
+
+/* Active styles */
+.info-card.active {
+  @apply bg-primary bg-[url('/info-card-bg.png')];
+}
+
+/* Icon Box */
+.info-card-icon {
+  @apply border-primary-lighter border-4 bg-primary 
+    bg-[url('/cog-checkmark-white.png')] bg-contain bg-no-repeat bg-center 
+    rounded-[15px] h-[75px] max-w-[85px] transition-all duration-300;
+}
+
+.info-card.active .info-card-icon {
+  @apply bg-white bg-[url('/cog-checkmark.png')] border-primary-light;
+}
+
+/* Title */
+.info-card-title {
+  @apply font-gilroy font-semibold text-xl mt-2 transition-all duration-300;
+}
+
+.info-card.active .info-card-title {
+  @apply text-white;
+}
+
+/* Description */
+.info-card-text {
+  @apply mt-2 transition-all duration-300;
+}
+
+.info-card.active .info-card-text {
+  @apply text-white;
+}
+
+
+
+/* Feature Section */
+.feature-section {
+  @apply flex flex-col md:flex-row items-center justify-between;
+}
+
+.feature-image {
+  @apply relative w-full md:w-1/2 flex justify-center;
+}
+
+.feature-content {
+  @apply max-w-lg text-center md:text-left;
+}
+
+.feature-content h1 {
+  @apply text-5xl md:text-6xl font-gilroy font-semibold leading-tight;
+}
+
+.feature-content p {
+  @apply text-lg text-gray-600 mt-4;
+}
+
+/* Feature Cards */
+.feature-card {
+  @apply flex items-center gap-3 bg-white border border-gray-300 p-4 rounded-lg shadow-sm;
+}
+
+.feature-icon {
+  @apply text-primary text-lg;
+}

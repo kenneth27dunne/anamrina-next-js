@@ -1,0 +1,17 @@
+.category-btn {
+    transition: all 0.3s ease;
+  }
+.category-btn:hover {
+    @apply 
+    bg-primary-dark
+  text-white;
+}
+
+.job-card {
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+.job-card:hover {
+    transform: translateY(-5px);
+}
+  

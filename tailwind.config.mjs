@@ -8,9 +8,28 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#7856ff"
+        primary: "var(--color-primary)",
+        "primary-light": "var(--color-primary-light)",
+        "primary-lighter": "var(--color-primary-lighter)",
+        "primary-dark": "var(--color-primary-dark)",
+      },
+      screens: { 
+        'xxs': "425px",
+        'xs': "480px",
+        'sm': '640px', 
+        'nvMd': '890px', 
+        'md': '1024px', 
+        'lg': '1280px', 
+        'xl': '1920px', 
+      },
+      fontFamily: {
+        sans: ['var(--font-quicksand)', 'sans-serif'],
+        gilroy: ["var(--font-gilroy)", 'var(--font-poppins)', 'sans-serif'],
+      },
+      backgroundImage: {
+        'hero-bg': "url('/backgroundImage.jpg')",
       },
     },
   },
-  plugins: [],
+  plugins: []
 };

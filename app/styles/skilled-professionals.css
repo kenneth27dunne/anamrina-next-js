@@ -1,0 +1,54 @@
+.skilled-professionals-section {
+    @apply py-16;
+  }
+  
+  /* Layout */
+  .content-wrapper {
+    @apply flex flex-col md:flex-row items-center justify-between gap-12 max-w-7xl mx-auto px-6;
+  }
+  
+  /* Left Side Text */
+  .text-content {
+    @apply max-w-[40rem] text-center md:text-left;
+  }
+  
+  
+  .text-content .highlight {
+    @apply text-primary;
+  }
+  
+  .text-content > p {
+    @apply text-lg text-gray-600 mt-4;
+  }
+  
+  /* Bullet Points */
+  .bullet-points {
+    @apply mt-6 space-y-4;
+  }
+  
+  .bullet {
+    @apply flex items-center bg-white border border-gray-300 rounded-xl shadow-sm p-4 flex-col sm:flex-row;
+  }
+  
+  .bullet-icon {
+    @apply w-12 h-12 sm:mr-4;
+  }
+  
+  .bullet h3 {
+    @apply text-lg font-semibold;
+  }
+  
+  .bullet p {
+    @apply text-gray-600 mt-1;
+  }
+  
+  /* Right Side Image */
+  .image-container {
+    @apply relative  sm:min-w-[310px] w-full md:w-[500px] flex justify-center;
+  }
+  
+  .image-background {
+    @apply absolute top-0 left-0 w-full h-full bg-primary rounded-xl;
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+  }
+  

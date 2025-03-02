@@ -1,0 +1,26 @@
+/* Feature Section */
+.feature-section {
+    @apply flex flex-col md:flex-row items-center justify-between;
+  }
+  
+  .feature-image {
+    @apply relative w-full md:w-1/2 flex md:justify-start justify-center;
+  }
+  
+  .feature-content {
+    @apply max-w-lg text-center md:text-left;
+  }  
+  
+  .feature-content ~ p {
+    @apply text-lg text-gray-600 mt-4;
+  }
+  
+  /* Feature Cards */
+  .feature-card {
+    @apply flex items-center gap-3 bg-white border border-gray-300 p-4 rounded-lg shadow-sm;
+  }
+  
+  .feature-icon {
+    @apply text-primary text-lg;
+  }
+  

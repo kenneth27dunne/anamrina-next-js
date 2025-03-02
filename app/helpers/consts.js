@@ -1,0 +1,1 @@
+export const noCache = { cache: 'no-store' };

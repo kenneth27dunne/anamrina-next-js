@@ -1,0 +1,50 @@
+/* Services Section Container */
+.services-section {
+    @apply py-16 text-center;
+  }
+  
+  .services-header {
+    @apply max-w-4xl mx-auto;
+  }
+  
+  .services-header h2 {
+    @apply text-5xl font-medium  font-gilroy;
+  }
+  
+  .services-header p {
+    @apply text-lg text-gray-600 mt-4;
+  }
+  
+  /* Service Cards */
+  .service-card {
+    @apply relative w-full max-w-[350px] p-[12px] h-full rounded-[25px] transition-transform hover:scale-105
+    bg-[url('/service-card-background.png')] bg-[100%] bg-no-repeat;
+  }
+  
+  .service-card .service-background {
+    @apply absolute inset-0 z-[-1] rounded-2xl; 
+  }
+  
+  .service-card img {
+    @apply relative w-full h-48 mb-4 rounded-3xl object-cover;
+  }
+  
+  .service-card .service-title {
+    @apply text-xl font-semibold font-gilroy mt-2;
+  }
+  
+  .service-card .service-text {
+    @apply text-gray-600 mt-2;
+  }
+  
+  /* Arrow Button */
+  .service-card .service-arrow {
+    @apply absolute bottom-[3px] right-[3px] flex items-center justify-center w-[50px] h-[50px] bg-primary text-white 
+      rounded-full transition-transform hover:scale-110;
+  }
+  
+  /* Learn More Button */
+  .services-btn {
+    @apply mt-10;
+  }
+  

@@ -1,0 +1,36 @@
+/* button styles */
+.btn {
+  @apply 
+    px-8 py-3 
+    rounded-xl 
+    text-center
+    font-medium
+    border-2 border-primary
+    transition-transform
+    hover:scale-110
+}
+.btn:hover {
+  @apply bg-opacity-90;
+}
+.btn-primary {
+  @apply bg-primary text-white;
+}
+.btn-secondary {
+  @apply 
+    border-2 
+    border-primary
+    text-primary
+    bg-white
+}
+.btn-lg {
+  @apply
+    px-7 py-4
+    md:px-10 md:py-5 
+    font-bold
+    xs:text-lg
+    w-4/5
+    xs:mx-4 xs:my-auto
+    mx-auto
+    my-3
+    xs:w-auto
+}

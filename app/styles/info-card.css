@@ -1,0 +1,43 @@
+.info-card {
+    @apply flex flex-col justify-between border border-[#B2B2B2] bg-white 
+      bg-cover rounded-[15px] p-5 flex-grow transition-all duration-300 cursor-pointer min-h-full;
+  }
+  
+  .info-card.active {
+    @apply bg-primary bg-[url('/info-card-bg.png')];
+  }
+  
+  /* Icon Box */
+  .info-card-icon {
+    @apply border-primary-lighter border-4 bg-primary 
+      text-white bg-contain bg-no-repeat bg-center 
+      flex justify-center items-center
+      rounded-[15px] h-[75px] max-w-[85px] transition-all duration-300;
+  }
+  
+  .info-card-icon svg {
+    @apply h-5/6 w-5/6
+  }
+
+  .info-card.active .info-card-icon {
+    @apply bg-white border-primary-light text-primary;
+  }
+  
+  /* Title */
+  .info-card-title {
+    @apply font-gilroy font-semibold text-xl mt-2 transition-all duration-300;
+  }
+  
+  .info-card.active .info-card-title {
+    @apply text-white;
+  }
+  
+  /* Description */
+  .info-card-text {
+    @apply mt-2 transition-all duration-300;
+  }
+  
+  .info-card.active .info-card-text {
+    @apply text-white;
+  }
+  

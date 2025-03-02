@@ -1,0 +1,76 @@
+:root {
+    --color-primary: #0130b5; 
+    --color-primary-light: color-mix(in srgb, var(--color-primary), white 20%);
+    --color-primary-lighter: color-mix(in srgb, var(--color-primary), white 35%);
+    --color-primary-dark: color-mix(in srgb, var(--color-primary), black 20%);
+    --header-height: 0;
+    --footer-height: 0;
+  }
+  
+  /* General styles */
+  html, body {
+    @apply text-[#222222];
+  }
+    
+  p > a {
+    @apply text-primary underline;
+  }
+
+.shadow {
+  -webkit-filter: drop-shadow( 0 0 5px rgba(0, 0, 0, .2));
+  filter: drop-shadow( 0 0 5px rgba(0, 0, 0, .2));
+}
+.testimonial-slider {
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  outline: none!important;
+}
+
+.hero-title, .hero-title p, .hero-title strong {
+  @apply font-semibold font-gilroy text-5xl sm:text-6xl md:text-7xl max-w-3xl md:max-w-5xl mt-3 mx-auto capitalize
+}
+
+.hero-title b, .hero-title strong {
+  @apply font-semibold
+}
+
+.section-title {
+  @apply
+  text-4xl 
+  sm:text-5xl 
+  md:text-6xl 
+  font-gilroy 
+  font-medium 
+  capitalize
+  leading-tight
+}
+.section-title span, 
+.section-title br, 
+.section-title div, 
+.section-title i , 
+.section-title strong, 
+.section-title b,
+h1 span, 
+h1 br, 
+h1 div, 
+h1 i , 
+h1 strong, 
+h1 b {
+  @apply 
+  text-primary
+  text-4xl 
+  sm:text-5xl 
+  md:text-6xl 
+  font-gilroy 
+  font-medium 
+  capitalize
+  leading-tight
+}
+
+.section-title ~ .section-description {
+  @apply text-lg text-gray-600 my-4 text-center;
+}
