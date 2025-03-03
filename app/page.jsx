@@ -3,6 +3,6 @@ import PageComponent from "./components/pageComponent";
 
 export default function Home() {
   return (
-    <PageComponent path="/api/home-page" isHomepage={false} fetchOptions={{ next: { revalidate: 3600 } }} />    
+    <PageComponent path="/api/home-page" isHomepage={false} fetchOptions={{ next: { revalidate: 1800 } }} />    
   )
 }

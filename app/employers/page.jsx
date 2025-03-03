@@ -6,7 +6,7 @@ export default function Employers() {
     <PageComponent 
       path="/api/employer-page"
       isHomepage={false}
-    //  fetchOptions={{ next: { revalidate: 6600 } }} 
+      fetchOptions={{ next: { revalidate: 1800 } }} 
      />
   )
 }
