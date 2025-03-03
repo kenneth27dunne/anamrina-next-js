@@ -1,12 +1,14 @@
-main, .container {
+  main, .container {
     @apply !max-w-7xl mx-auto px-4 sm:px-8;
   }
   main {
-    @apply mt-32
+    @apply xs:mt-32
+    mt-24
+    min-h-full
   }
-  main > h2 {
+  /* main > h2 {
     @apply mb-4 pb-2 text-base;
-  }
+  } */
   
 
   html, body {
@@ -37,7 +39,8 @@ main, .container {
       !m-0
       !pb-0
       !pt-0
-      !mb-32
+      xs:!mb-32
+      !mb-24      
   }
 
   main {

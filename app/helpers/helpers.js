@@ -46,13 +46,11 @@ export const getBlockComponent = async (block, searchParams) => {
         /> 
     case 'layout.contact-form':
       return <ContactForm key={block.id} {...block} />
-
     case 'layout.testimonial-block':
       return <TestimonialSlider key={block.id} {...block} />
     case 'component.job-listing':      
       let data = await getJobListingsData(searchParams)
-      console.log(data)
-      return <JobListingsSection key={block.id} {...block} {...data} />
+      return <JobListingsSection key={block.documentId} {...block} {...data} />
     case 'layout.feature2-block':
       return <Feature2Section key={block.id} {...block} />
     case 'layout.grid-image-cards':

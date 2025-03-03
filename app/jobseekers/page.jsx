@@ -12,7 +12,7 @@ export const metadata = {
 export default function JobSeekers({searchParams}) {  
   return (
     <>
-      <PageComponent path="/api/job-seekers-page" isHomepage={false} searchParams={searchParams} />
+      <PageComponent path="/api/job-seekers-page" isHomepage={false} searchParams={searchParams} fetchOptions={{ next: { revalidate: 300 } }} />
     </>
   )
 }

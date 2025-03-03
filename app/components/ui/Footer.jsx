@@ -4,21 +4,22 @@ import Image from "next/image";
 import { FaFacebook, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import SocialIconWrapper from "../ui/SocialIconWrapper";
-import Logo from '../../assets/Untitled-ALOGO.png'
+import Logo from '../../assets/anamrina_white.png'
 
 const Footer = () => {
   return (
     <footer className="bg-[#08163B] text-white py-12">
       <div className="container mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-32">
           {/* Left Section - Logo & About */}
-          <div>
+          <div className="flex flex-col justify-center items-center SPAN">
             <Image src={Logo} alt="Anamrina Logo" width={120} height={50} />
             <p className="mt-4 text-sm">
               Connecting skilled professionals with your businesses for seamless remote work solutions.
               Your bridge to talent and productivity.
             </p>
           </div>
+          
 
           {/* Quick Links */}
           <div>
@@ -33,14 +34,14 @@ const Footer = () => {
           </div>
 
           {/* Help Section */}
-          <div>
+          {/* <div>
             <h3 className="font-semibold text-lg">Resources</h3>
             <ul className="mt-4 space-y-2 text-sm">
               <li><Link href="/contact">Contact Us</Link></li>
               <li><Link href="/terms">Terms & Conditions</Link></li>
               <li><Link href="/privacy">Privacy Policy</Link></li>
             </ul>
-          </div>
+          </div> */}
 
           {/* Social Media */}
           <div>
@@ -74,8 +75,8 @@ const Footer = () => {
         <div className="mt-8 border-t border-gray-600 pt-6 flex flex-col md:flex-row justify-between text-sm">
           <p>©{new Date().getFullYear()} All Rights Reserved</p>
           <div className="flex space-x-4">
-            <Link href="/privacy-policy">Privacy Policy</Link>
-            <Link href="/terms">Terms and Conditions</Link>
+            {/* <Link href="/privacy-policy">Privacy Policy</Link>
+            <Link href="/terms">Terms and Conditions</Link> */}
           </div>
         </div>
       </div>

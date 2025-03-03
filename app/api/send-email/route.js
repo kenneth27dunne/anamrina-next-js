@@ -7,7 +7,7 @@ export async function POST(req) {
     const transporter = nodemailer.createTransport({
       host: process.env.EMAIL_HOST,  // GoDaddy SMTP server
       port: process.env.EMAIL_PORT,  // Port 465 (SSL) or 587 (TLS)
-      secure: true,  // Use true for port 465, false for port 587
+      secure: false,  // Use true for port 465, false for port 587
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,

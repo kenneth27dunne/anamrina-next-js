@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import Logo from '../../assets/Untitled-ALOGO2.png'
+import Logo from '../../assets/full-logo-dark2.png'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Menu, X } from "lucide-react";
@@ -44,10 +44,10 @@ export default function Navbar() {
     <nav ref={menuRef}>
       <div className="container mx-auto flex justify-between items-center">
 
-        <Link href="/" className="flex items-center gap-4">
-          <div className="nav-logo inline-flex items-center h-[75px] w-[75px] relative">
-            <Image src={Logo} alt="Anamrina Logo" layout="fill" objectFit="contain" placeholder='blur'/>
-          </div>
+        <Link href="/" className="flex items-center flex-col">
+          <div className="nav-logo inline-flex flex-col items-center h-[75px] w-[175px] relative">
+            <Image src={Logo} alt="Anamrina Logo" layout="fill" objectFit="contain" placeholder='blur'/>            
+          </div> 
         </Link>
 
         <button className="md:hidden p-[0px]" onClick={() => setMenuOpen(!menuOpen)}>

@@ -9,7 +9,7 @@
   
   /* General styles */
   html, body {
-    @apply text-[#222222];
+    @apply text-[#08163b];
   }
     
   p > a {
@@ -30,47 +30,62 @@
   outline: none!important;
 }
 
-.hero-title, .hero-title p, .hero-title strong {
-  @apply font-semibold font-gilroy text-5xl sm:text-6xl md:text-7xl max-w-3xl md:max-w-5xl mt-3 mx-auto capitalize
-}
 
-.hero-title b, .hero-title strong {
-  @apply font-semibold
-}
 
-.section-title {
+.section-title, h2 {
   @apply
-  text-4xl 
-  sm:text-5xl 
-  md:text-6xl 
-  font-gilroy 
-  font-medium 
-  capitalize
-  leading-tight
+  !text-4xl 
+  sm:!text-5xl 
+  md:!text-6xl 
+  !font-gilroy 
+  !font-medium 
+  !capitalize
+  !leading-tight
 }
+
+h3 {
+  @apply !font-semibold !text-3xl
+}
+
 .section-title span, 
 .section-title br, 
 .section-title div, 
 .section-title i , 
 .section-title strong, 
 .section-title b,
+
 h1 span, 
 h1 br, 
 h1 div, 
 h1 i , 
 h1 strong, 
-h1 b {
+h1 b,
+
+h2 span, 
+h2 br, 
+h2 div, 
+h2 i , 
+h2 strong, 
+h2 b {
   @apply 
-  text-primary
-  text-4xl 
-  sm:text-5xl 
-  md:text-6xl 
-  font-gilroy 
-  font-medium 
-  capitalize
-  leading-tight
+  !text-primary
+  !text-4xl 
+  sm:!text-5xl 
+  md:!text-6xl 
+  !font-gilroy 
+  !font-medium 
+  !capitalize
+  !leading-tight
 }
 
 .section-title ~ .section-description {
   @apply text-lg text-gray-600 my-4 text-center;
+}
+
+.hero-title, .hero-title p, .hero-title strong {
+  @apply !font-semibold !font-gilroy !text-5xl sm:!text-6xl md:!text-7xl !max-w-3xl md:!max-w-5xl !mt-3 !mx-auto !capitalize
+}
+
+.hero-title b, .hero-title strong {
+  @apply !font-semibold
 }

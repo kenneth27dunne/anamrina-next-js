@@ -1,4 +1,30 @@
-const Categories = ({ categories, selectedCategory, setSelectedCategory }) => {
+'use client'
+import { useEffect, useState } from "react";
+import { useSearchParams, useRouter, usePathname } from "next/navigation";
+
+const Categories = ({ categories }) => {
+    const searchParams = useSearchParams();
+    const router = useRouter();
+    const pathname = usePathname();
+
+    const [category, setCategory] = useState(searchParams.get('cat') ?? "All");
+
+    useEffect(() => {
+        setCategory(searchParams.get('cat') ?? "All");
+    }, [searchParams]);
+  
+    const handleCategoryChange = (selectedCategory) => {
+        const params = new URLSearchParams(searchParams.toString());
+
+        if(!selectedCategory || selectedCategory === undefined || selectedCategory === "All") {
+            params.delete("cat"); 
+        } else {
+            params.set("cat", selectedCategory);
+        }
+
+        router.push(`${pathname}?${params.toString()}`);
+    }; 
+
     return (
       <>
         <h3 className="text-3xl mt-6 font-semibold text-left">
@@ -6,9 +32,9 @@ const Categories = ({ categories, selectedCategory, setSelectedCategory }) => {
         </h3>
   
         <div className="flex flex-wrap gap-2 mt-6">
-            <button onClick={() => setSelectedCategory("All")} 
+            <button onClick={() => handleCategoryChange("All")} 
               className={`category-btn ${
-                selectedCategory === "All" ? "bg-primary text-white" : "bg-gray-200"
+                category === "All" ? "bg-primary text-white" : "bg-gray-200"
               } px-4 py-2 rounded-full`} >
               All
             </button>
@@ -16,9 +42,9 @@ const Categories = ({ categories, selectedCategory, setSelectedCategory }) => {
             <button
               key={cat.documentId}
               className={`category-btn ${
-                selectedCategory === cat.Title ? "bg-primary text-white" : "bg-gray-200"
+                category === cat.Title ? "bg-primary text-white" : "bg-gray-200"
               } px-4 py-2 rounded-full`}
-              onClick={() => setSelectedCategory(cat.Title)}
+              onClick={() => handleCategoryChange(cat.Title)}
             >
               {cat.Title}
             </button>

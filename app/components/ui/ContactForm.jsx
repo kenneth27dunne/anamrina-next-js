@@ -1,12 +1,12 @@
 "use client";
 import React, { useState } from "react";
 import ReactMarkdown from "react-markdown";
-import { BsFillChatSquareTextFill } from "react-icons/bs";
 import { FaPhone } from "react-icons/fa6";
 import { IoIosMail, IoIosPin } from "react-icons/io";
+import { LuAlarmClock } from "react-icons/lu";
 
 
-export default function ContactForm({ Title, Description }) {
+export default function ContactForm({ Title, Description, isApply = false }) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -50,8 +50,8 @@ export default function ContactForm({ Title, Description }) {
           <ReactMarkdown>{Title}</ReactMarkdown>
         </h2>
       }
-      { Description && <p className="section-description">{Description}</p> }
-      <div className="grid md:grid-cols-2 gap-6 text-left rounded-lg p-6 border">
+      { Description && <p className="section-description text-center mb-6">{Description}</p> }
+      <div className={`grid ${isApply? "md:grid-cols-1": "md:grid-cols-2"} gap-6 text-left rounded-lg p-6 border`}>
         {/* Left - Contact Form */}
         <form className="" onSubmit={handleSubmit}>
           <div className="mb-2 mt-[-10px]">
@@ -96,11 +96,13 @@ export default function ContactForm({ Title, Description }) {
             {loading ? "Sending..." : "Submit"}
           </button>
           {successMessage && (
-            <p className="text-center text-green-600">{successMessage}</p>
+            <p className="text-center text-primary">{successMessage}</p>
           )}
         </form>
 
         {/* Right - Contact Info Cards */}
+        {
+        isApply === false && 
         <div className="grid sm:grid-cols-2 gap-4 sm:max-h-[460px]">
           {/* Location */}
           <div className="p-4 bg-blue-100 rounded-lg flex justify-around flex-col max-h-[230px]">
@@ -122,10 +124,10 @@ export default function ContactForm({ Title, Description }) {
           </div>
           {/* Chat */}
           <div className="p-4 border rounded-lg flex justify-around flex-col max-h-[230px]">
-            <div className="rounded-full bg-primary text-4xl pt-[5px] h-[73px] w-[73px] flex justify-center items-center text-white">
-                <BsFillChatSquareTextFill />
+            <div className="rounded-full bg-primary text-4xl h-[73px] w-[73px] flex justify-center items-center text-white">
+              <LuAlarmClock />
             </div>
-            <h4 className="font-bold mt-2 text-lg">Chat With Us</h4>
+            <h4 className="font-bold mt-2 text-lg">Opening Hours</h4>
             <p className="text-gray-600 text-sm">
               Mon - Fri 09:00 AM - 05:00 PM
             </p>
@@ -139,6 +141,7 @@ export default function ContactForm({ Title, Description }) {
             <p className="text-gray-600 text-sm">02165465421315</p>
           </div>
         </div>
+        }
       </div>
     </section>
   );

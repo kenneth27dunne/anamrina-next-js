@@ -2,6 +2,7 @@ import qs from 'qs';
 import { noCache } from '../helpers/consts'
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+const PAGE_SIZE = 9
 
 const pageQuery = qs.stringify({
   populate: {
@@ -60,6 +61,7 @@ export async function getStrapiData(path, options = { cache: 'no-store' }) {
     const response = await fetch(url.href, options);
     const data = await response.json();
     
+    console.log(data)
     return data;
   } catch (err) {
     console.error(err)
@@ -75,42 +77,56 @@ export async function getJobListingsData(searchParams){
 }
 
 export async function searchJobListings(searchParams) {
-  console.log("searchJobListings", searchParams.s)
+  const { s, cat, pn } = await searchParams;
 
-  let searchString = searchParams? searchParams.s  : "";
-  let categoryId = searchParams? searchParams.cat : "";
-  let pageNumber = searchParams? searchParams.pn ?? 1 : 1 ;
+  let searchString = searchParams? s  : "";
+  let categoryName = searchParams? cat : "";
+  let pageNumber = searchParams? pn ?? 1 : 1 ;
   
   const query = qs.stringify({
     populate: {
       CompanyLogo: {
         populate: '*'
-      }
+      },
+      categories: true
     },
     filters: {
-      $or: [
+      $and: [ 
         {
-          Title: {
-            $containsi: searchString,
-          },
+          categories: {
+            Title: {
+              $eq: categoryName
+            }
+          }
         },
         {
-          Description: {
-            $containsi: searchString,
-          },
-        },
-        {
-          Location: {
-            $containsi: searchString,
-          },
-        },
-      ],
+          $or: [
+            {
+              Title: {
+                $containsi: searchString,
+              },
+            },
+            {
+              Description: {
+                $containsi: searchString,
+              },
+            },
+            {
+              Location: {
+                $containsi: searchString,
+              },
+            },
+          ],
+        }
+      ]
     },
-    fields: ['Title', 'Location', 'Description'],  
+    fields: ['Title', 'Company', 'Location', 'Description'],  
     pagination: {
-      pageSize: 2,
+      pageSize: PAGE_SIZE,
       page: pageNumber,
     },
+    sort: ['publishedAt:desc'],
+  }, {
     encodeValuesOnly: true,
   });
 
@@ -120,6 +136,31 @@ export async function searchJobListings(searchParams) {
   const jobsRes = await fetch(url.href, noCache);
   const jobData = await jobsRes.json();
 
-  console.log(jobData)
+  return jobData;
+}
+
+export async function getJobListing(documentId) {  
+  const query = qs.stringify({
+    populate: {
+      CompanyLogo: {
+        populate: '*'
+      },
+      categories: true
+    },
+    filters: {
+      documentId: {
+        $eq: documentId
+      }     
+    }
+  }, {
+    encodeValuesOnly: true,
+  });
+
+  const url = new URL('/api/job-listings', BASE_URL);
+  url.search = query;
+  
+  const jobsRes = await fetch(url.href, noCache);
+  const jobData = await jobsRes.json();
+
   return jobData;
 }

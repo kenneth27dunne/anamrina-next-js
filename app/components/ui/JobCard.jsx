@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const JobCard = ({ job }) => {
   return (
-    <div className="job-card border rounded-lg shadow-md p-5 pt-8 mt-[40px] bg-white text-left relative">        
+    <div className="job-card border rounded-lg shadow-md p-5 pt-8 mt-[40px] bg-white text-left relative flex flex-col min-h-80">        
     {
         job.CompanyLogo &&   
         <div className="flex items-center bg-white justify-center rounded-lg p-2 absolute h-[80px] w-[80px] -top-[40px] drop-shadow">
@@ -18,7 +18,7 @@ const JobCard = ({ job }) => {
         </div>
     }
 
-        <div className="">
+        <div className="flex-grow">
             <h3 className="font-semibold text-lg mt-3">{job.Title}</h3>
             <p className="text-gray-500 font-medium">{job.Company}</p>
 
