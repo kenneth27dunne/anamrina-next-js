@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import Logo from '../../assets/full-logo-dark2.png'
+import Logo from '../../assets/full-logo-dark.png'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Menu, X } from "lucide-react";

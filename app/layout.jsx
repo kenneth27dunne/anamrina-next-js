@@ -46,10 +46,7 @@ const gilroy = localFont({
 
 export const metadata = {
   title: "Anamrina Recruitment",
-  description: "Connecting business with professions from around the world",
-  icons: {
-    icon: '/white_icon_web.png',
-  },
+  description: "Connecting business with professions from around the world"
 };
 
 export default async function RootLayout({ children }) {  
