@@ -46,7 +46,7 @@ export default function Navbar() {
 
         <Link href="/" className="flex items-center flex-col">
           <div className="nav-logo inline-flex flex-col items-center h-[75px] w-[175px] relative">
-            <Image src={Logo} alt="Anamrina Logo" layout="fill" objectFit="contain" placeholder='blur'/>            
+            <Image src={Logo} alt="Anamrina Logo" layout="fill" objectFit="contain" priority={true} loading={true} />            
           </div> 
         </Link>
 

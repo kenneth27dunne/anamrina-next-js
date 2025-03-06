@@ -32,19 +32,19 @@
 
 
 
-.section-title, h2 {
+.section-title {
   @apply
-  !text-4xl 
+  text-4xl 
   sm:!text-5xl 
   md:!text-6xl 
-  !font-gilroy 
-  !font-medium 
-  !capitalize
-  !leading-tight
+  font-gilroy 
+  font-medium 
+  capitalize
+  leading-tight
 }
 
 h3 {
-  @apply !font-semibold !text-3xl
+  @apply font-semibold text-3xl
 }
 
 .section-title span, 

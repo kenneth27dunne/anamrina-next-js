@@ -24,7 +24,8 @@ export default {
       },
       fontFamily: {
         sans: ['var(--font-quicksand)', 'sans-serif'],
-        gilroy: ["var(--font-gilroy)", 'var(--font-poppins)', 'sans-serif'],
+        gilroy: ["var(--font-montserrat)", 'var(--font-montserrat)', 'sans-serif'],
+        montserrat: ["var(--font-montserrat)", 'var(--font-montserrat)', 'sans-serif'],
       },
       backgroundImage: {
         'hero-bg': "url('/backgroundImage.jpg')",

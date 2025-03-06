@@ -10,7 +10,7 @@ function InfoCardSection({ Title, Description, cards }) {
   return (
     <section className="py-12 ">
       <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
-        <h2 className="section-title max-w-[17ch] md:mr-8">
+        <h2 className="section-title max-w-[18ch] md:mr-8">
           <ReactMarkdown>{Title}</ReactMarkdown>
         </h2>
         <p className="max-w-[49ch] mt-4 md:mt-0">

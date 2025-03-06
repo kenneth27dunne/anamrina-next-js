@@ -1,20 +1,13 @@
 import Image from "next/image";
 
-const ImageComponent = ({ localSrc, strapiImage, alt = "Image", className = "", imgProps = {} }) => {
+const ImageComponent = ({ localSrc, strapiImage, alt = "Image", className = "", imgProps = {}, useThumbnail = true}) => {
     
-  var strapiPath = strapiImage?.formats?.thumbnail?.url
-
-  console.log("1 - ", strapiPath)
-
+  var strapiPath = strapiImage?.formats?.small?.url ?? strapiImage?.formats?.thumbnail?.url  
   var stp = strapiPath && strapiPath.length > 0 ? (strapiPath.startsWith("http") ? strapiPath : process.env.NEXT_PUBLIC_BASE_URL + strapiPath) : ""
-
-  console.log("2 - ", stp)
 
   let src = localSrc
     ? localSrc
     : stp;
-
-  console.log("3 - ", src)
 
   if (!src) return null; // Avoid rendering if no image source is provided
 

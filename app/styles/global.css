@@ -1,5 +1,6 @@
 @tailwind base;
 @tailwind components;
+@tailwind utilities;
 
 /* Import modular CSS files */
 @import "./base.css";
@@ -14,5 +15,3 @@
 @import "./skilled-professionals.css";
 @import "./testimonial-slider.css";
 @import "./job-listings.css";
-
-@tailwind utilities;

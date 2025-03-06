@@ -136,7 +136,6 @@ export async function searchJobListings(searchParams) {
   const jobsRes = await fetch(url.href, noCache);
   const jobData = await jobsRes.json();
 
-  console.log(jobData)
   return jobData;
 }
 

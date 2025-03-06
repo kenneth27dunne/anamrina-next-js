@@ -1,7 +1,7 @@
 import "./styles/global.css";
 import Navbar from "./components/ui/Navbar";
 import Footer from "./components/ui/Footer";
-import { Quicksand, Poppins } from 'next/font/google';
+import { Quicksand, Poppins, Montserrat } from 'next/font/google';
 import localFont from 'next/font/local';
 import Script from "next/script";
 // import { getNavigation } from "./helpers/fetchHelper";
@@ -16,6 +16,12 @@ const poppins = Poppins({
   subsets: ['latin'],
   weight: ['400', '600', '700'],
   variable: '--font-poppins',
+});
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['400', '600', '700'],
+  variable: '--font-montserrat',
 });
 
 const gilroy = localFont({
@@ -52,7 +58,7 @@ export const metadata = {
 export default async function RootLayout({ children }) {  
   // const navOptions = await getNavigation()
   return (
-    <html lang="en" className={`${gilroy.variable} ${quicksand.variable} ${poppins.variable}`}>
+    <html lang="en" className={`${gilroy.variable} ${quicksand.variable} ${poppins.variable} ${montserrat.variable}`}>
       <head>
       <Script
         id="layout-vars-script"
