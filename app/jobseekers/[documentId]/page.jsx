@@ -11,7 +11,6 @@ async function JobListing({ params }) {
   const strapiData = await getJobListing(params.documentId);
   const { FullDescription, Title, Location, Company, CompanyLogo } = strapiData.data[0];
 
-  console.log("Job Listing page - params.documentId", )
   return (
     <>
     <header>

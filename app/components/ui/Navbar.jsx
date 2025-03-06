@@ -25,7 +25,6 @@ export default function Navbar() {
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
-        console.log("here again")
         setMenuOpen(false);
       }
     };

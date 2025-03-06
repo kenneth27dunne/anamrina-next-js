@@ -61,7 +61,6 @@ export async function getStrapiData(path, options = { cache: 'no-store' }) {
     const response = await fetch(url.href, options);
     const data = await response.json();
     
-    console.log(data)
     return data;
   } catch (err) {
     console.error(err)
