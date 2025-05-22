@@ -5,18 +5,22 @@ export async function POST(req) {
     const { name, email, message } = await req.json();
 
     const transporter = nodemailer.createTransport({
-      host: process.env.EMAIL_HOST,  // GoDaddy SMTP server
-      port: process.env.EMAIL_PORT,  // Port 465 (SSL) or 587 (TLS)
-      secure: false,  // Use true for port 465, false for port 587
+      host: process.env.EMAIL_HOST,  
+      port: process.env.EMAIL_PORT, // Use 587 for TLS
+      secure: false, // Must be false for TLS
       auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
       },
+      tls: {
+        rejectUnauthorized: false, // Sometimes needed for GoDaddy
+      }
     });
+    
 
     await transporter.sendMail({
       from: `"${name}" <${email}>`,
-      to: process.env.EMAIL_USER,  // Your GoDaddy email (receiving address)
+      to: process.env.EMAIL_USER,//process.env.EMAIL_USER,  // Your GoDaddy email (receiving address)
       subject: `New Contact Form Submission from ${name}`,
       text: message,
     });

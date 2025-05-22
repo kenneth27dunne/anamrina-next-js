@@ -4,7 +4,7 @@ import Image from "next/image";
 import { FaFacebook, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import SocialIconWrapper from "../ui/SocialIconWrapper";
-import Logo from '../../assets/anamrina_white.png'
+import Logo from '../../assets/Full name gradient white_300x87.png'
 
 const Footer = () => {
   return (
@@ -13,7 +13,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-32">
           {/* Left Section - Logo & About */}
           <div className="flex flex-col justify-center items-center SPAN">
-            <Image src={Logo} alt="Anamrina Logo" width={120} height={50} />
+            <Image src={Logo} alt="Anamrina Logo" width={500} height={150} />
             <p className="mt-4 text-sm">
               Connecting skilled professionals with your businesses for seamless remote work solutions.
               Your bridge to talent and productivity.

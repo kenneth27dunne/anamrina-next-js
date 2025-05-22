@@ -60,6 +60,7 @@ export default async function RootLayout({ children }) {
   return (
     <html lang="en" className={`${gilroy.variable} ${quicksand.variable} ${poppins.variable} ${montserrat.variable}`}>
       <head>
+        <meta name="apple-mobile-web-app-title" content="Anamrina" />
       <Script
         id="layout-vars-script"
         strategy="afterInteractive"

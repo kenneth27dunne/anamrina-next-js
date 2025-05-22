@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import Logo from '../../assets/full-logo-dark.png'
+import Logo from '../../assets/Full name minimal dark_300x87.png'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Menu, X } from "lucide-react";
@@ -44,8 +44,8 @@ export default function Navbar() {
       <div className="container mx-auto flex justify-between items-center">
 
         <Link href="/" className="flex items-center flex-col">
-          <div className="nav-logo inline-flex flex-col items-center h-[75px] w-[175px] relative">
-            <Image src={Logo} alt="Anamrina Logo" layout="fill" objectFit="contain" priority={true} loading={true} />            
+          <div className="nav-logo inline-flex flex-col items-center h-[60px] w-[200px] relative">
+            <Image src={Logo} alt="Anamrina Logo" layout="fill" objectFit="contain" priority={true} />            
           </div> 
         </Link>
 

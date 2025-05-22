@@ -3,10 +3,7 @@ import PageComponent from '../components/pageComponent';
 
 export const metadata = {
   title: "Job Seekers - Anamrina Recruitment",
-  description: "Connecting business with professions from around the world",
-  icons: {
-    icon: '/white_icon_web.png',
-  },
+  description: "Find the perfect job for you. We have a wide range of job listings for you to choose from."
 };
 
 export default function JobSeekers({searchParams}) {  
