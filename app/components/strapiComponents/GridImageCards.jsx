@@ -5,6 +5,7 @@ import ImageComponent from '../ui/ImageComponent'
 function GridImageCards({Title, Description, Cards}) {
   return (
     <section className="text-center">
+      <div className='inner-wrapper'> 
         <h2 className="section-title">
           <ReactMarkdown>{Title}</ReactMarkdown>  
         </h2>
@@ -12,21 +13,22 @@ function GridImageCards({Title, Description, Cards}) {
             {Description}
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-            {Cards.map((card, i) => (
-            <div
-                key={i}
-                className="bg-white p-6 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition h-auto">
-                <div className="relative h-72 w-full">
-                
-                  <ImageComponent localSrc={card.ImagePath} strapiImage={card.Image}
-                    imgProps={{alt: card.Title ?? "service Image", fill: true, className: "border-gray-200", style: {objectFit: "cover",
-                      borderRadius: '10px' }}} />
-                </div>
-                {card.Title && <h4>{card.Title}</h4>}
-                <p className="text-lg mt-4">{card.Description}</p>
-            </div>
-            ))}
+            {Cards.map((card, i) => {
+              console.log(card)
+              return (<div
+                  key={i}
+                  className="bg-white p-6 rounded-lg shadow-md shadow-primary-lighter border hover:shadow-primary-light hover:shadow-xl transition h-auto">
+                  <div className="relative w-full max-h-[18rem] min-h-[12rem]">
+                    <ImageComponent localSrc={card.ImagePath} strapiImage={card.Image}
+                      imgProps={{alt: card.Title ?? "service Image", fill: true, className: "border-gray-200", style: {objectFit: "cover",
+                        borderRadius: '10px' }}} />
+                  </div>
+                  {card.Title && <h4 className='info-card-title'>{card.Title}</h4>}
+                  <p className="text-lg mt-4">{card.Description}</p>
+              </div>)
+            })}
         </div>
+      </div>
     </section>
   )
 }

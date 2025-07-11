@@ -1,15 +1,18 @@
-  main, .container {
+.container {
     @apply !max-w-7xl mx-auto px-4 sm:px-8;
   }
+  
   main {
-    @apply xs:mt-32
-    mt-24
+    @apply 
     min-h-full
   }
   /* main > h2 {
     @apply mb-4 pb-2 text-base;
   } */
   
+  .inner-wrapper {
+    @apply !max-w-7xl mx-auto px-4 sm:px-8 !py-32;
+  }
 
   html, body {
     height: 100%;
@@ -38,9 +41,19 @@
     @apply
       !m-0
       !pb-0
-      !pt-0
-      xs:!mb-32
-      !mb-24      
+      !pt-0   
+  }
+  section:nth-child(3n + 1) {
+
+    background: #fff;
+  }
+  section:nth-child(2n + 2) {
+    background: #f7f9ff;
+    /* background: #e9eefd; */
+  }
+  section:nth-child(3n) {
+
+    /* background: #d2deff; */
   }
 
   main {

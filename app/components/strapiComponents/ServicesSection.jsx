@@ -7,46 +7,48 @@ const ServicesSection = ({ title, description, services, learnMoreLink }) => {
   
   return (
     <section className="services-section">
-      <div className="services-header">
-        <h2 className="section-title">{title}</h2>
-        <p>{description}</p>
-      </div>
+      <div className="inner-wrapper">
+        <div className="services-header">
+          <h2 className="section-title">{title}</h2>
+          <p>{description}</p>
+        </div>
 
-      {/* Service Cards */}
-      <div className="flex flex-wrap justify-center gap-6 mt-12 text-left">
-        {services.map((service, index) => (
-          <div key={index} className="service-card h-[345px] group overflow-hidden" 
-            style={{
-              backgroundSize: "100% 100%",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat"
-            }}>
-    
-            {/* Service Image */}
-            <div className="relative w-full h-48 rounded-xl overflow-hidden">
-              <ImageComponent 
-                localSrc={service.ImagePath} 
-                strapiImage={service.Image} 
-                imgProps={{ layout:"fill", objectFit:"cover" }} 
-              />
+        {/* Service Cards */}
+        <div className="flex flex-wrap justify-center gap-6 mt-12 text-left">
+          {services.map((service, index) => (
+            <div key={index} className="service-card h-[345px] group overflow-hidden" 
+              style={{
+                backgroundSize: "100% 100%",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat"
+              }}>
+      
+              {/* Service Image */}
+              <div className="relative w-full h-48 rounded-xl overflow-hidden">
+                <ImageComponent 
+                  localSrc={service.ImagePath} 
+                  strapiImage={service.Image} 
+                  imgProps={{ layout:"fill", objectFit:"cover" }} 
+                />
+              </div>
+
+              {/* Service Info */}
+              <h3 className="service-title">{service.Title}</h3>
+              <p className="service-text max-w-[260px] md:max-w-[295px]">{service.Description}</p>
+
+              {/* Arrow Button */}
+              <div className="service-arrow">                
+                  <ArrowUpRight />
+              </div>
             </div>
+          ))}
+        </div>
 
-            {/* Service Info */}
-            <h3 className="service-title">{service.Title}</h3>
-            <p className="service-text max-w-[260px] md:max-w-[295px]">{service.Description}</p>
-
-            {/* Arrow Button */}
-            <div className="service-arrow">                
-                <ArrowUpRight />
-            </div>
-          </div>
-        ))}
+        {/* Learn More Button */}
+        <Link href={learnMoreLink}>
+          <button className="services-btn btn btn-primary">Learn More</button>
+        </Link>
       </div>
-
-      {/* Learn More Button */}
-      <Link href={learnMoreLink}>
-        <button className="services-btn btn btn-primary">Learn More</button>
-      </Link>
     </section>
   );
 };

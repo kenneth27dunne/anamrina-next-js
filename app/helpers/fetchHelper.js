@@ -16,7 +16,11 @@ const pageQuery = qs.stringify({
     Blocks: {
       on: {
         'layout.grid-image-cards': {
-          populate: '*'
+          populate: {
+            Cards: {
+              populate: '*'
+            }
+          }
         },
         'layout.info-card-block': {
           populate: '*'

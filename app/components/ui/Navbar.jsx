@@ -1,6 +1,8 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import Logo from '../../assets/Full name minimal dark_300x87.png'
+import DarkLogo from '../../assets/Full name gradient white_300x87.png'
+
+import LightLogo from '../../assets/Full name minimal dark_300x87.png'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Menu, X } from "lucide-react";
@@ -45,7 +47,8 @@ export default function Navbar() {
 
         <Link href="/" className="flex items-center flex-col">
           <div className="nav-logo inline-flex flex-col items-center h-[60px] w-[200px] relative">
-            <Image src={Logo} alt="Anamrina Logo" layout="fill" objectFit="contain" priority={true} />            
+          <Image src={DarkLogo} alt="Anamrina Logo" layout="fill" objectFit="contain" priority={true} className="dark-logo" />    
+          <Image src={LightLogo} alt="Anamrina Logo" layout="fill" objectFit="contain" priority={true} className="light-logo" />            
           </div> 
         </Link>
 
@@ -60,9 +63,9 @@ export default function Navbar() {
         >
           <li className="nav-item justify-center"><Link onClick={() => setMenuOpen(false)} className="md:block" href="/">Home</Link></li>
           <li className="nav-item justify-center"><Link onClick={() => setMenuOpen(false)} className="md:block" href="/about">About</Link></li>
-          <li className="nav-item justify-center"><Link onClick={() => setMenuOpen(false)} className="md:block" href="/services">Services</Link></li>
-          <li className="nav-item justify-center"><Link onClick={() => setMenuOpen(false)} className="md:block" href="/jobseekers">For Job Seekers</Link></li>
-          <li className="nav-item justify-center"><Link onClick={() => setMenuOpen(false)} className="md:block" href="/employers">For Employers</Link></li>
+          <li className="nav-item justify-center"><Link onClick={() => setMenuOpen(false)} className="md:block" href="/howItWorks">How It Works</Link></li>
+          {/* <li className="nav-item justify-center"><Link onClick={() => setMenuOpen(false)} className="md:block" href="/jobseekers">For Job Seekers</Link></li>
+          <li className="nav-item justify-center"><Link onClick={() => setMenuOpen(false)} className="md:block" href="/employers">For Employers</Link></li> */}
           <li className="nav-item justify-center">
             <Link onClick={() => setMenuOpen(false)} href="/contact">
               <button className="btn btn-primary">Contact Us</button>

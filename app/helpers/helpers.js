@@ -16,6 +16,7 @@ import GridImageCards from '../components/strapiComponents/GridImageCards'
 import ContactForm from "../components/ui/ContactForm";
 import TestimonialSlider from "../components/ui/TestimonialSlider";
 import { getJobListingsData } from "./fetchHelper";
+import DynamicContactFormClient from "../components/ui/DynamicContactFormClient";
 
 
 export const getIconComponent = (iconName) => {
@@ -45,7 +46,7 @@ export const getBlockComponent = async (block, searchParams) => {
         learnMoreLink={block.CallToActionURL}       
         /> 
     case 'layout.contact-form':
-      return <ContactForm key={block.id} {...block} />
+      return <DynamicContactFormClient key={block.id} {...block} />;
     case 'layout.testimonial-block':
       return <TestimonialSlider key={block.id} {...block} />
     case 'component.job-listing':      
@@ -56,6 +57,6 @@ export const getBlockComponent = async (block, searchParams) => {
     case 'layout.grid-image-cards':
       return <GridImageCards key={block.id} {...block} />
     default: 
-      null
+      return null;
   }
 }

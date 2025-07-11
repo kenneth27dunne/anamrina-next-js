@@ -5,7 +5,7 @@ import ReactMarkdown from "react-markdown";
 const Feature2Section = ({Title, Description, Features, Image, ImagePath}) => {
   return (
     <section className="skilled-professionals-section">
-      <div className="content-wrapper">
+      <div className="content-wrapper inner-wrapper">
         {/* Left Side Content */}
         <div className="text-content">
           <h2 className="section-title">

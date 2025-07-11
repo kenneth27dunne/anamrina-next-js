@@ -1,6 +1,6 @@
 /* nav styles */
 nav {
-    height: 101px;
+    height: 101px;    
     @apply
       flex items-center
       shadow-md  
@@ -45,7 +45,34 @@ nav {
       transition-all duration-[600]
       /* shadow-[0px_0px_15px_0px_rgba(0,0,0,0.20)]  */
   }
-  
+  nav .dark-logo {
+    display: none;
+  }
+  nav .light-logo {
+    display: block;
+  }
+/* dark mode */
+/* 
+  @media (prefers-color-scheme: dark) {
+    nav {   
+      @apply
+      bg-[#08163B]
+    }
+    nav svg {
+      @apply text-white ;
+    }
+    nav a, nav span {
+      @apply md:text-white ;
+    }
+    nav .dark-logo {
+      display: block;
+    }
+    nav .light-logo {
+      display: none;
+    }
+  }
+*/
+
   @media (max-width: 1024px) {
     .nav-menu {
       @apply

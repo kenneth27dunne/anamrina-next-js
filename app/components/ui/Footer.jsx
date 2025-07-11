@@ -10,63 +10,60 @@ const Footer = () => {
   return (
     <footer className="bg-[#08163B] text-white py-12">
       <div className="container mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-32">
+        <div className="grid grid-cols-1 sm:grid-cols-4 gap-12">
           {/* Left Section - Logo & About */}
-          <div className="flex flex-col justify-center items-center SPAN">
+          <div>
             <Image src={Logo} alt="Anamrina Logo" width={500} height={150} />
-            <p className="mt-4 text-sm">
-              Connecting skilled professionals with your businesses for seamless remote work solutions.
-              Your bridge to talent and productivity.
+            <p className="mt-4 text-sm text-gray-300">
+              Connecting skilled professionals with your businesses for seamless remote work solutions. Your bridge to talent and productivity.
             </p>
           </div>
-          
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-semibold text-lg">Quick Links</h3>
-            <ul className="mt-4 space-y-2 text-sm">
+            <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
+            <ul className="space-y-2 text-sm">
               <li><Link href="/">Home</Link></li>
               <li><Link href="/about">About Us</Link></li>
-              <li><Link href="/services">Services</Link></li>
-              <li><Link href="/jobseekers">For Job Seekers</Link></li>
-              <li><Link href="/employers">For Employers</Link></li>
+              <li><Link href="/howItWorks">How It Works</Link></li>
+              <li><Link href="/contact">Contact Us</Link></li>
             </ul>
           </div>
 
-          {/* Help Section */}
-          {/* <div>
-            <h3 className="font-semibold text-lg">Resources</h3>
-            <ul className="mt-4 space-y-2 text-sm">
-              <li><Link href="/contact">Contact Us</Link></li>
-              <li><Link href="/terms">Terms & Conditions</Link></li>
-              <li><Link href="/privacy">Privacy Policy</Link></li>
-            </ul>
-          </div> */}
-
-          {/* Social Media */}
+          {/* Ireland Office */}
           <div>
-            <h3 className="font-semibold text-lg">Find Us On</h3>
-            <div className="flex mt-4 space-x-4">
-              <Link href="https://facebook.com" target="_blank" aria-label="Facebook" className="">
-                <SocialIconWrapper>
-                    <FaFacebook className="scale-125"/>
-                </SocialIconWrapper>
-              </Link>
-              <Link href="https://instagram.com" target="_blank" aria-label="Instagram">
-                <SocialIconWrapper innerClass="text-blue-700 bg-white">
-                    <FaInstagram className="scale-110"/>
-                </SocialIconWrapper>
-              </Link>
-              <Link href="https://twitter.com" target="_blank" aria-label="Twitter">
-                <SocialIconWrapper innerClass="text-blue-700 bg-white">
-                    <FaXTwitter className="scale-110"/>
-                </SocialIconWrapper>
-              </Link>
-              <Link href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
-                <SocialIconWrapper innerClass="text-blue-700 bg-white">
-                    <FaLinkedinIn />
-                </SocialIconWrapper>
-              </Link>
+            <h3 className="font-semibold text-lg mb-4">Ireland Office</h3>
+            <div className="text-sm text-gray-300 space-y-2">
+              <p>
+                95 Millennium Business Park,<br />
+                Cappagh Road, Ballycoolin,<br />
+                Dublin 11, D11 YK25, Ireland
+              </p>
+              <p>
+                <span className="font-medium">Phone:</span> +353 858 239 516
+              </p>
+              <p>
+                <span className="font-medium">Email:</span><br />
+                <a href="mailto:info@anamrinarecruitment.com" className="text-blue-300 hover:text-blue-200 transition-colors">
+                  info@anamrinarecruitment.com
+                </a>
+              </p>
+            </div>
+          </div>
+
+          {/* India Office */}
+          <div>
+            <h3 className="font-semibold text-lg mb-4">India Office</h3>
+            <div className="text-sm text-gray-300 space-y-2">
+              <p>
+                613-617, 6th Floor,<br />
+                Motiaz Royal Business Park,<br />
+                Zirakpur - 140603, Punjab, India
+              </p>
+              <p>
+                <span className="font-medium">Phone:</span> +91 896 819 0404<br />
+                <span className="font-medium">Phone:</span> +91 987 879 3002
+              </p>
             </div>
           </div>
         </div>

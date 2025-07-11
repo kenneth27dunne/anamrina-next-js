@@ -6,8 +6,9 @@ import ImageComponent from "../ui/ImageComponent";
 
 function FeatureSection({Title, Description, FeatureBullets, featureImagePath, featureImage, callToAction}) {
   return (
-    <section className="feature-section py-12 sm:py-14 md:py-28 flex flex-col md:flex-row items-center justify-between">
-      {/* Left Side - Image */}
+    <section className="">
+     <div className="inner-wrapper flex flex-col md:flex-row items-center justify-between">
+         {/* Left Side - Image */}
       <div className="feature-image relative">
         <ImageComponent 
           localSrc={featureImagePath} 
@@ -47,6 +48,7 @@ function FeatureSection({Title, Description, FeatureBullets, featureImagePath, f
           </Link>
         }
       </div>
+     </div>
     </section>
   );
 }
