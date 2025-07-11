@@ -8,7 +8,7 @@ export const metadata = {
 
 const HowItWorksPage = () => {
   return (
-    <PageComponent isHomepage={false} path="/api/how-it-works-page"  fetchOptions={{ next: { revalidate: 0 } }} />
+    <PageComponent isHomepage={false} path="/api/how-it-works-page"  fetchOptions={{ next: { revalidate: 3200 } }} />
   );
 };
 
