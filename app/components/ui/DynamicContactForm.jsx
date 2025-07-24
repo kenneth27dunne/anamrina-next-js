@@ -325,7 +325,12 @@ export default function DynamicContactForm({ Title, Description }) {
 
           {/* Contact Info Cards */}
           <div className="grid sm:grid-cols-2 gap-4 sm:max-h-[460px]">
-            <div className="p-4 bg-blue-100 rounded-lg flex justify-around flex-col max-h-[230px]">
+            <a 
+              href="https://maps.google.com/?q=95+Millennium+Business+Park,+Cappagh+Road,+Ballycoolin,+Dublin+11,+D11+YK25"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-4 bg-blue-100 rounded-lg flex justify-around flex-col max-h-[230px] hover:bg-blue-200 transition-colors cursor-pointer"
+            >
               <div className="rounded-full bg-primary text-5xl h-[73px] w-[73px] flex justify-center items-center text-white">
                 <IoIosPin />
               </div>
@@ -333,14 +338,17 @@ export default function DynamicContactForm({ Title, Description }) {
               <p className="text-gray-600 text-sm">
               95 Millennium Business Park, Cappagh Road, Ballycoolin, Dublin 11, D11 YK25
               </p>
-            </div>
-            <div className="p-4 border rounded-lg flex justify-around flex-col max-h-[230px]">
+            </a>
+            <a 
+              href="mailto:info@anamrinarecruitment.com"
+              className="p-4 border rounded-lg flex justify-around flex-col max-h-[230px] hover:bg-gray-50 transition-colors cursor-pointer"
+            >
               <div className="rounded-full bg-primary text-6xl h-[73px] w-[73px] flex justify-center items-center text-white">
                 <IoIosMail />
               </div>
               <h4 className="font-bold mt-2 text-lg">Email Us</h4>
               <p className="text-gray-600 text-sm">info@anamrinarecruitment.com</p>
-            </div>
+            </a>
             <div className="p-4 border rounded-lg flex justify-around flex-col max-h-[230px]">
               <div className="rounded-full bg-primary text-4xl h-[73px] w-[73px] flex justify-center items-center text-white">
                 <LuAlarmClock />
@@ -348,13 +356,16 @@ export default function DynamicContactForm({ Title, Description }) {
               <h4 className="font-bold mt-2 text-lg">Opening Hours</h4>
               <p className="text-gray-600 text-sm">Mon - Fri 09:00 AM - 05:00 PM</p>              
             </div>
-            <div className="p-4 border rounded-lg flex justify-around flex-col max-h-[230px]">
+            <a 
+              href="tel:+353858239516"
+              className="p-4 border rounded-lg flex justify-around flex-col max-h-[230px] hover:bg-gray-50 transition-colors cursor-pointer"
+            >
               <div className="rounded-full bg-primary text-4xl  h-[73px] w-[73px] flex justify-center items-center text-white">
                 <FaPhone />
               </div>
               <h4 className="font-bold mt-2 text-lg">Call Us Now</h4>
               <p className="text-gray-600 text-sm">+353858239516</p>
-            </div>
+            </a>
           </div>
         </div>
       </div>

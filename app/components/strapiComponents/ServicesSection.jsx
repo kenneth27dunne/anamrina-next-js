@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowUpRight } from "lucide-react";
+import { Check } from "lucide-react";
 import Link from "next/link";
 import ImageComponent from "../ui/ImageComponent";
 
@@ -38,7 +38,7 @@ const ServicesSection = ({ title, description, services, learnMoreLink }) => {
 
               {/* Arrow Button */}
               <div className="service-arrow">                
-                  <ArrowUpRight />
+                  <Check />
               </div>
             </div>
           ))}
