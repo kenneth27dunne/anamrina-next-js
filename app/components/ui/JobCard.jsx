@@ -10,11 +10,16 @@ const JobCard = ({ job }) => {
     {
         job.CompanyLogo &&   
         <div className="flex items-center bg-white justify-center rounded-lg p-2 absolute h-[80px] w-[80px] -top-[40px] drop-shadow">
-            <ImageComponent strapiImage={job.CompanyLogo} imgProps={{
-                alt: "job.Title",
-                width:60,
-                height: 60
-            }} />
+            <ImageComponent 
+              strapiImage={job.CompanyLogo} 
+              alt={job.Company || "Company logo"}
+              loading="lazy"
+              imgProps={{
+                width: 60,
+                height: 60,
+                sizes: "60px"
+              }} 
+            />
         </div>
     }
 

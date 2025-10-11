@@ -1,5 +1,5 @@
 {
-  "name": "dojo-helpdesk",
+  "name": "anamrina-recruitment",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/third-parties": "^15.5.4",
     "@remixicon/react": "^4.6.0",
     "@strapi/blocks-react-renderer": "^1.0.2",
     "framer-motion": "^12.23.0",

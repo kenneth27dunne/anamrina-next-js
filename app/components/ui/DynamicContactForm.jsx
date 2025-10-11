@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
 import CreatableSelect from "react-select/creatable";
 const Select = CreatableSelect;
@@ -160,7 +160,18 @@ export default function DynamicContactForm({ Title, Description }) {
   });
   const [loading, setLoading] = useState(false);
   const [successMessage, setSuccessMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
   const [errors, setErrors] = useState({});
+
+  useEffect(() => {
+    if (successMessage || errorMessage) {
+      const timer = setTimeout(() => {
+        setSuccessMessage("");
+        setErrorMessage("");
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [successMessage, errorMessage]);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -201,6 +212,7 @@ export default function DynamicContactForm({ Title, Description }) {
     setErrors(validationErrors);
     if (Object.keys(validationErrors).length > 0) {
       setSuccessMessage("");
+      setErrorMessage("");
       return;
     }
 
@@ -213,10 +225,12 @@ export default function DynamicContactForm({ Title, Description }) {
     setLoading(false);
     if (res.ok) {
       setSuccessMessage("Message sent successfully!");
+      setErrorMessage("");
       setFormData({ name: "", email: "", role: "", experience: "", message: "" });
       setErrors({});
     } else {
-      setSuccessMessage("Failed to send message. Try again later.");
+      setSuccessMessage("");
+      setErrorMessage("Failed to send message. Try again later.");
     }
   };
 
@@ -311,16 +325,22 @@ export default function DynamicContactForm({ Title, Description }) {
               />
               {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
             </div>
-            <button
-              type="submit"
-              className="btn btn-primary mt-1"
-              disabled={loading}
-            >
-              {loading ? "Sending..." : "Submit"}
-            </button>
-            {successMessage && (
-              <p className="text-center text-primary mt-2">{successMessage}</p>
-            )}
+            {/* Button and message inline */}
+            <div className="flex items-center gap-3">
+              <button
+                type="submit"
+                className="btn btn-primary mt-1"
+                disabled={loading}
+              >
+                {loading ? "Sending..." : "Submit"}
+              </button>
+              {(successMessage || errorMessage) && (
+                <p className={`text-sm ${successMessage ? "text-blue-700" : "text-red-600"}`}
+                  style={{ textAlign: "left" }}>
+                  {successMessage || errorMessage}
+                </p>
+              )}
+            </div>
           </form>
 
           {/* Contact Info Cards */}

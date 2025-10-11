@@ -63,7 +63,15 @@ const TestimonialSlider = ({Title, Description, testimonials}) => {
               >
                 <p className="testimonial-text">{testimonial.Description}</p>
                 <div className="client-info">
-                  <Image src={testimonial.ImagePath} alt={testimonial.ClientName} width={50} height={50} className="client-img" />
+                  <Image 
+                    src={testimonial.ImagePath} 
+                    alt={testimonial.ClientName} 
+                    width={50} 
+                    height={50} 
+                    className="client-img" 
+                    loading="lazy"
+                    sizes="50px"
+                  />
                   <div>
                     <h3 className="client-name">{testimonial.ClientName}</h3>
                     <p className="client-role">{testimonial.BusinessName}</p>

@@ -1,6 +1,7 @@
 import "./styles/global.css";
 import Navbar from "./components/ui/Navbar";
 import Footer from "./components/ui/Footer";
+import GoogleAnalytics from "./components/GoogleAnalytics";
 import { Quicksand, Poppins, Montserrat } from 'next/font/google';
 import localFont from 'next/font/local';
 import Script from "next/script";
@@ -51,8 +52,54 @@ const gilroy = localFont({
 });
 
 export const metadata = {
-  title: "Anamrina Recruitment",
-  description: "Connecting business with professions from around the world"
+  title: {
+    default: "Anamrina Recruitment - Global Professional Services",
+    template: "%s | Anamrina Recruitment"
+  },
+  description: "Connecting businesses with top professionals from around the world. Expert recruitment services for companies and job seekers globally.",
+  keywords: ["recruitment", "global professionals", "hiring", "job placement", "talent acquisition", "international recruitment"],
+  authors: [{ name: "Anamrina Recruitment" }],
+  creator: "Anamrina Recruitment",
+  publisher: "Anamrina Recruitment",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://anamrinarecruitment.com',
+    siteName: 'Anamrina Recruitment',
+    title: 'Anamrina Recruitment - Global Professional Services',
+    description: 'Connecting businesses with top professionals from around the world. Expert recruitment services for companies and job seekers globally.',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Anamrina Recruitment - Global Professional Services',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Anamrina Recruitment - Global Professional Services',
+    description: 'Connecting businesses with top professionals from around the world.',
+    images: ['/og-image.jpg'],
+  },
+  alternates: {
+    canonical: 'https://anamrinarecruitment.com',
+  },
+  verification: {
+    google: 'your-google-verification-code',
+  },
 };
 
 export default async function RootLayout({ children }) {  
@@ -61,6 +108,34 @@ export default async function RootLayout({ children }) {
     <html lang="en" className={`${gilroy.variable} ${quicksand.variable} ${poppins.variable} ${montserrat.variable}`}>
       <head>
         <meta name="apple-mobile-web-app-title" content="Anamrina" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Anamrina Recruitment",
+              "description": "Connecting businesses with top professionals from around the world",
+              "url": "https://anamrinarecruitment.com",
+              "logo": "https://anamrinarecruitment.com/logo.png",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "contactType": "customer service",
+                "url": "https://anamrinarecruitment.com/contact"
+              },
+              "sameAs": [
+                "https://www.linkedin.com/company/anamrina-recruitment",
+                "https://twitter.com/anamrinarecruit"
+              ],
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "Global"
+              },
+              "serviceType": "Recruitment Services",
+              "areaServed": "Worldwide"
+            })
+          }}
+        />
       <Script
         id="layout-vars-script"
         strategy="afterInteractive"
@@ -81,6 +156,7 @@ export default async function RootLayout({ children }) {
       />
       </head>
       <body>
+        <GoogleAnalytics />
         <Navbar />
           {children}
         <Footer />

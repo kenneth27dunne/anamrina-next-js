@@ -4,6 +4,7 @@ import ReactMarkdown from "react-markdown";
 import { FaPhone } from "react-icons/fa6";
 import { IoIosMail, IoIosPin } from "react-icons/io";
 import { LuAlarmClock } from "react-icons/lu";
+import { trackContactForm } from "../GoogleAnalyticsAdvanced";
 
 
 export default function ContactForm({ Title, Description, isApply = false }) {
@@ -35,6 +36,8 @@ export default function ContactForm({ Title, Description, isApply = false }) {
     if (res.ok) {
       setSuccessMessage("Message sent successfully!");
       setFormData({ name: "", email: "", message: "" });
+      // Track successful form submission
+      trackContactForm(isApply ? 'job_application' : 'contact');
     } else {
       setSuccessMessage("Failed to send message. Try again later.");
     }

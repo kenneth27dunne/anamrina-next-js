@@ -6,6 +6,17 @@ import { BlocksRenderer } from "@strapi/blocks-react-renderer"
 import ImageComponent from "../../components/ui/ImageComponent";
 import Hero from "../../components/strapiComponents/Hero";
 
+export const metadata = {
+  title: "Job Listing - Anamrina Recruitment",
+  description: "View job listing details and apply for positions.",
+  robots: {
+    index: false,
+    follow: false,
+    noarchive: true,
+    nosnippet: true,
+    noimageindex: true,
+  },
+};
 
 async function JobListing({ params }) {
   const strapiData = await getJobListing(params.documentId);

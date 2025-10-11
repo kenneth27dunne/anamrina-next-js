@@ -31,8 +31,8 @@ export async function POST(req) {
     emailBody += `Message:\n${data.message || ""}\n`;
     emailBodyHtml += `<p><strong>Message:</strong><br/>${(data.message || "").replace(/\n/g, "<br/>")}</p>`;
     
-    console.log(emailBody);
-    console.log(emailBodyHtml);
+    // console.log(emailBody);
+    // console.log(emailBodyHtml);
 
     const transporter = nodemailer.createTransport({
       host: process.env.EMAIL_HOST,  

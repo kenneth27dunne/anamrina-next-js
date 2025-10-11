@@ -13,7 +13,14 @@ function FeatureSection({Title, Description, FeatureBullets, featureImagePath, f
         <ImageComponent 
           localSrc={featureImagePath} 
           strapiImage={featureImage} 
-          imgProps={{ width: "500", height: "500", className: "relative z-10", alt: "Professionals" }} 
+          alt="Professionals"
+          loading="lazy"
+          imgProps={{ 
+            width: 500, 
+            height: 500, 
+            className: "relative z-10",
+            sizes: "(max-width: 768px) 100vw, 500px"
+          }} 
         />
       </div>
 

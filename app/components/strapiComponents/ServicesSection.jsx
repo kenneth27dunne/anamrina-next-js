@@ -28,7 +28,13 @@ const ServicesSection = ({ title, description, services, learnMoreLink }) => {
                 <ImageComponent 
                   localSrc={service.ImagePath} 
                   strapiImage={service.Image} 
-                  imgProps={{ layout:"fill", objectFit:"cover" }} 
+                  alt={service.Title || "Service image"}
+                  loading="lazy"
+                  imgProps={{ 
+                    fill: true, 
+                    style: { objectFit: "cover" },
+                    sizes: "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  }} 
                 />
               </div>
 

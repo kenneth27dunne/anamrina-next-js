@@ -72,8 +72,8 @@ const Footer = () => {
         <div className="mt-8 border-t border-gray-600 pt-6 flex flex-col md:flex-row justify-between text-sm">
           <p>©{new Date().getFullYear()} All Rights Reserved</p>
           <div className="flex space-x-4">
-            {/* <Link href="/privacy-policy">Privacy Policy</Link>
-            <Link href="/terms">Terms and Conditions</Link> */}
+            <Link href="/privacy-policy" className="hover:text-blue-300 transition-colors">Privacy Policy</Link>
+            <Link href="/cookies-policy" className="hover:text-blue-300 transition-colors">Cookies Policy</Link>
           </div>
         </div>
       </div>

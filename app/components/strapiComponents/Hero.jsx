@@ -1,10 +1,10 @@
 import Link from 'next/link'
 import React from 'react'
 import ReactMarkdown from "react-markdown";
+import Image from 'next/image';
 import { getIconComponent } from "../../helpers/helpers";
 
 function Hero({ pill, title, description, isHomepage, CTA, isMini = false }) {
-    console.log(CTA)
 
   // Floating cards data (sample, adjust as needed)
   let floatingCards = [
@@ -41,7 +41,15 @@ function Hero({ pill, title, description, isHomepage, CTA, isMini = false }) {
       {floatingCards.map(card => (
         <div key={card.id} className={card.style + ' z-10'}>
           {card.type === 'image' ? (
-            <img src={card.src} alt="" className="rounded-xl shadow-lg w-full h-full object-cover" />
+            <Image 
+              src={card.src} 
+              alt={`Professional ${card.src.includes('face') ? 'profile' : 'office environment'}`} 
+              className="rounded-xl shadow-lg w-full h-full object-cover" 
+              width={170}
+              height={140}
+              loading="lazy"
+              sizes="(max-width: 768px) 0px, 170px"
+            />
           ) : (
             <div className="bg-white rounded-xl shadow-lg p-3 flex flex-col items-start justify-center h-full w-full text-left">
               <span className="text-xs font-semibold text-gray-700 mb-1">{card.content.title}</span>

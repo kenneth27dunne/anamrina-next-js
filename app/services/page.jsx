@@ -3,7 +3,14 @@ import PageComponent from '../components/pageComponent';
 
 export const metadata = {
   title: "Services - Anamrina Recruitment",
-  description: "We offer a wide range of services to help connect businesses from around the world to top professionals."
+  description: "We offer a wide range of services to help connect businesses from around the world to top professionals.",
+  robots: {
+    index: false,
+    follow: false,
+    noarchive: true,
+    nosnippet: true,
+    noimageindex: true,
+  },
 };
 
 const ServicesPage = () => {

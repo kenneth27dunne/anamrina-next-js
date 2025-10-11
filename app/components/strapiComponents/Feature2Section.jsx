@@ -22,7 +22,9 @@ const Feature2Section = ({Title, Description, Features, Image, ImagePath}) => {
                 <ImageComponent 
                   localSrc={item.IconImagePath}
                   strapiImage={item.IconImage}
-                  imgProps={{ alt: item.Title, width:40, height:40, className:"bullet-icon" }} 
+                  alt={item.Title}
+                  loading="lazy"
+                  imgProps={{ width:40, height:40, className:"bullet-icon", sizes: "40px" }} 
                 />
                 <div>
                   <h3>{item.Title}</h3>
@@ -38,11 +40,13 @@ const Feature2Section = ({Title, Description, Features, Image, ImagePath}) => {
           <ImageComponent
             localSrc={ImagePath}
             strapiImage={Image}
+            alt="Professionals discussing work"
+            loading="lazy"
             imgProps={{
-              alt: "Professionals discussing work",
               width: 500,
               height: 400,
-              className: "main-image"
+              className: "main-image",
+              sizes: "(max-width: 768px) 100vw, 500px"
             }}
           />
         </div>

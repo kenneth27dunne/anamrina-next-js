@@ -6,6 +6,7 @@ import LightLogo from '../../assets/Full name minimal dark_300x87.png'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Menu, X } from "lucide-react";
+import { trackButtonClick } from "../GoogleAnalyticsAdvanced";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -47,8 +48,8 @@ export default function Navbar() {
 
         <Link href="/" className="flex items-center flex-col">
           <div className="nav-logo inline-flex flex-col items-center h-[60px] w-[200px] relative">
-          <Image src={DarkLogo} alt="Anamrina Logo" layout="fill" objectFit="contain" priority={true} className="dark-logo" />    
-          <Image src={LightLogo} alt="Anamrina Logo" layout="fill" objectFit="contain" priority={true} className="light-logo" />            
+          <Image src={DarkLogo} alt="Anamrina Recruitment - Global Professional Services Logo" fill sizes="200px" priority={true} className="dark-logo" />    
+          <Image src={LightLogo} alt="Anamrina Recruitment - Global Professional Services Logo" fill sizes="200px" priority={true} className="light-logo" />            
           </div> 
         </Link>
 
@@ -67,7 +68,10 @@ export default function Navbar() {
           {/* <li className="nav-item justify-center"><Link onClick={() => setMenuOpen(false)} className="md:block" href="/jobseekers">For Job Seekers</Link></li>
           <li className="nav-item justify-center"><Link onClick={() => setMenuOpen(false)} className="md:block" href="/employers">For Employers</Link></li> */}
           <li className="nav-item justify-center">
-            <Link onClick={() => setMenuOpen(false)} href="/contact">
+            <Link onClick={() => {
+              setMenuOpen(false);
+              trackButtonClick('Contact Us', 'navbar');
+            }} href="/contact">
               <button className="btn btn-primary">Contact Us</button>
             </Link>
           </li>
