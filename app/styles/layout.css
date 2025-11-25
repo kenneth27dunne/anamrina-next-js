@@ -11,7 +11,7 @@
   } */
   
   .inner-wrapper {
-    @apply !max-w-7xl mx-auto px-4 sm:px-8 !py-32;
+    @apply !max-w-7xl mx-auto px-4 sm:px-8 !py-12 sm:!py-32;
   }
 
   html, body {
