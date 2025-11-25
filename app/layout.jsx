@@ -113,15 +113,17 @@ export default async function RootLayout({ children }) {
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Organization",
+              "@type": "ProfessionalService",
               "name": "Anamrina Recruitment",
-              "description": "Connecting businesses with top professionals from around the world",
+              "description": "Connecting businesses with top professionals from around the world. Expert recruitment services for companies and job seekers globally.",
               "url": "https://anamrinarecruitment.com",
               "logo": "https://anamrinarecruitment.com/logo.png",
+              "image": "https://anamrinarecruitment.com/og-image.jpg",
               "contactPoint": {
                 "@type": "ContactPoint",
                 "contactType": "customer service",
-                "url": "https://anamrinarecruitment.com/contact"
+                "url": "https://anamrinarecruitment.com/contact",
+                "email": "info@anamrinarecruitment.com"
               },
               "sameAs": [
                 "https://www.linkedin.com/company/anamrina-recruitment",
@@ -132,7 +134,42 @@ export default async function RootLayout({ children }) {
                 "addressCountry": "Global"
               },
               "serviceType": "Recruitment Services",
-              "areaServed": "Worldwide"
+              "areaServed": "Worldwide",
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Recruitment Services",
+                "itemListElement": [
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Talent Acquisition",
+                      "description": "Finding and recruiting top talent for businesses"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Executive Search",
+                      "description": "Specialized recruitment for senior-level positions"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Global Recruitment",
+                      "description": "International talent acquisition services"
+                    }
+                  }
+                ]
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "reviewCount": "150"
+              }
             })
           }}
         />
