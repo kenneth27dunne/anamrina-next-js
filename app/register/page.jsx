@@ -24,7 +24,7 @@ export default function RegisterPage({ searchParams }) {
         <header>
           <Hero isHomepage={false} 
                 pill={"Anamrina Recruitment"} 
-                title={"Register Your Interest"} 
+                title={"Register Your **Interest**"} 
                 description={"Register your interest with Anamrina Recruitment to connect with top professionals and opportunities worldwide."} 
                 CTA={null} isMini={true} />
         </header>

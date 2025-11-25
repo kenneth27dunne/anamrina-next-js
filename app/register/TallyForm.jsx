@@ -6,7 +6,11 @@ import Script from 'next/script';
 
 export default function TallyForm({ showSuccess = false }) {
   const router = useRouter();
+  //Paid tally account \/ 
   const tallySrc = "https://tally.so/embed/kddVBo?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1";
+  //Free tally account  
+  //const tallySrc = "https://tally.so/embed/RGWG9d?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1";
+
 
   useEffect(() => {
     if (showSuccess) {
@@ -40,7 +44,6 @@ export default function TallyForm({ showSuccess = false }) {
         data-tally-src={tallySrc}
         loading="eager"
         width="100%"
-        height="595"
         frameBorder="0"
         marginHeight="0"
         marginWidth="0"
