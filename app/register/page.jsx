@@ -16,7 +16,9 @@ export const metadata = {
   },
 };
 
-export default function RegisterPage() {
+export default function RegisterPage({ searchParams }) {
+  const showSuccess = searchParams?.success === 'true';
+
   return (
 <>
         <header>
@@ -29,7 +31,7 @@ export default function RegisterPage() {
       <main>
       <section>
           <div className="inner-wrapper !py-8">
-            <TallyForm />
+            <TallyForm showSuccess={showSuccess} />
           </div>
         </section>
       </main>
