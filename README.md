@@ -34,3 +34,18 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Under Construction Mode
+
+To enable the under construction page, set the following environment variable:
+
+```bash
+UNDER_CONSTRUCTION=true
+```
+
+When enabled, all pages will redirect to `/under-construction` except for the `/register` page, which will remain accessible. The under construction page does not include the header or footer.
+
+To disable, either remove the variable or set it to:
+```bash
+UNDER_CONSTRUCTION=false
+```

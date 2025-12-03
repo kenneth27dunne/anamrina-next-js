@@ -1,7 +1,6 @@
 import "./styles/global.css";
-import Navbar from "./components/ui/Navbar";
-import Footer from "./components/ui/Footer";
 import GoogleAnalytics from "./components/GoogleAnalytics";
+import ConditionalLayout from "./components/ConditionalLayout";
 import { Quicksand, Poppins, Montserrat } from 'next/font/google';
 import localFont from 'next/font/local';
 import Script from "next/script";
@@ -194,9 +193,9 @@ export default async function RootLayout({ children }) {
       </head>
       <body>
         <GoogleAnalytics />
-        <Navbar />
+        <ConditionalLayout>
           {children}
-        <Footer />
+        </ConditionalLayout>
       </body>
     </html>
   );
