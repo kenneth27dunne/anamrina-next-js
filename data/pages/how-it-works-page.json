@@ -1,0 +1,358 @@
+{
+  "data": {
+    "id": {},
+    "documentId": "engfxeayuxn9903qcbrfvwgv",
+    "createdAt": "2025-06-27T09:03:23.499Z",
+    "updatedAt": "2025-07-11T11:34:39.281Z",
+    "publishedAt": "2025-07-11T11:34:39.631Z",
+    "HeroSection": {
+      "id": {},
+      "Pill": "How It Works",
+      "Title": "Your **Seamless** Staffing **Solution**",
+      "Description": "We handle recruitment, equipment, HR and ongoing management—so you get remote professionals ready to deliver value from day one.",
+      "CTA": [
+        {
+          "id": {},
+          "url": "https://talented-splendor-1ceaa2c3d3.strapiapp.com/contact",
+          "text": "Get Started",
+          "isExternal": false,
+          "IsPrimary": {}
+        }
+      ]
+    },
+    "Blocks": [
+      {
+        "__component": "layout.info-card-block",
+        "id": {},
+        "Title": "How Anamrina Makes **Staffing Effortless**",
+        "Description": "Our end-to-end process covers everything from your brief to day-to-day management—so you get remote professionals ready to deliver value from day one.",
+        "cards": [
+          {
+            "id": {},
+            "Title": "You Tell Us What You Need\t",
+            "Description": "We deep-dive into your goals, the skills required, and cultural fit to define the perfect remote role.",
+            "iconName": "FiUserCheck"
+          },
+          {
+            "id": {},
+            "Title": "We Interview & Recruit",
+            "Description": "Through rigorous interview processes, we select only fully-qualified, English-fluent professionals.",
+            "iconName": "FaSearch"
+          },
+          {
+            "id": {},
+            "Title": "We Equip & Onboard",
+            "Description": "From shipping laptops to configuring secure VPNs and software licenses, your hire is tech-ready on day one.",
+            "iconName": "HiOutlineDesktopComputer"
+          },
+          {
+            "id": {},
+            "Title": "We Manage Ongoing Support",
+            "Description": "We oversee HR, payroll, and workflow integration—handling the details so you can focus on growth.",
+            "iconName": "MdSupportAgent"
+          }
+        ]
+      },
+      {
+        "__component": "layout.grid-image-cards",
+        "id": {},
+        "Title": "**Streamlined** Remote Staffing",
+        "Description": "Every step of our workflow is designed to remove the headaches from remote staffing. We source top-tier talent, equip them with the tools they need, and manage day-to-day operations—all so you can focus on driving your business forward.",
+        "Cards": [
+          {
+            "id": {},
+            "Title": "Vetted Talent",
+            "Description": "We hand-pick degree-qualified, English-fluent professionals with the right industry experience to match your specific needs.",
+            "ImagePath": null,
+            "Image": {
+              "id": {},
+              "documentId": "ugulheq5s91pe6fut1107bko",
+              "name": "pexels-mart-production-7643739.jpg",
+              "alternativeText": null,
+              "caption": null,
+              "width": {},
+              "height": {},
+              "formats": {
+                "large": {
+                  "ext": ".jpg",
+                  "url": "https://res.cloudinary.com/dajxrr9ax/image/upload/v1751734833/large_pexels_mart_production_7643739_8ae6b5b739.jpg",
+                  "hash": "large_pexels_mart_production_7643739_8ae6b5b739",
+                  "mime": "image/jpeg",
+                  "name": "large_pexels-mart-production-7643739.jpg",
+                  "path": null,
+                  "size": {},
+                  "width": {},
+                  "height": {},
+                  "sizeInBytes": {},
+                  "provider_metadata": {
+                    "public_id": "large_pexels_mart_production_7643739_8ae6b5b739",
+                    "resource_type": "image"
+                  }
+                },
+                "small": {
+                  "ext": ".jpg",
+                  "url": "https://res.cloudinary.com/dajxrr9ax/image/upload/v1751734833/small_pexels_mart_production_7643739_8ae6b5b739.jpg",
+                  "hash": "small_pexels_mart_production_7643739_8ae6b5b739",
+                  "mime": "image/jpeg",
+                  "name": "small_pexels-mart-production-7643739.jpg",
+                  "path": null,
+                  "size": {},
+                  "width": {},
+                  "height": {},
+                  "sizeInBytes": {},
+                  "provider_metadata": {
+                    "public_id": "small_pexels_mart_production_7643739_8ae6b5b739",
+                    "resource_type": "image"
+                  }
+                },
+                "medium": {
+                  "ext": ".jpg",
+                  "url": "https://res.cloudinary.com/dajxrr9ax/image/upload/v1751734833/medium_pexels_mart_production_7643739_8ae6b5b739.jpg",
+                  "hash": "medium_pexels_mart_production_7643739_8ae6b5b739",
+                  "mime": "image/jpeg",
+                  "name": "medium_pexels-mart-production-7643739.jpg",
+                  "path": null,
+                  "size": {},
+                  "width": {},
+                  "height": {},
+                  "sizeInBytes": {},
+                  "provider_metadata": {
+                    "public_id": "medium_pexels_mart_production_7643739_8ae6b5b739",
+                    "resource_type": "image"
+                  }
+                },
+                "thumbnail": {
+                  "ext": ".jpg",
+                  "url": "https://res.cloudinary.com/dajxrr9ax/image/upload/v1751734833/thumbnail_pexels_mart_production_7643739_8ae6b5b739.jpg",
+                  "hash": "thumbnail_pexels_mart_production_7643739_8ae6b5b739",
+                  "mime": "image/jpeg",
+                  "name": "thumbnail_pexels-mart-production-7643739.jpg",
+                  "path": null,
+                  "size": {},
+                  "width": {},
+                  "height": {},
+                  "sizeInBytes": {},
+                  "provider_metadata": {
+                    "public_id": "thumbnail_pexels_mart_production_7643739_8ae6b5b739",
+                    "resource_type": "image"
+                  }
+                }
+              },
+              "hash": "pexels_mart_production_7643739_8ae6b5b739",
+              "ext": ".jpg",
+              "mime": "image/jpeg",
+              "size": {},
+              "url": "https://res.cloudinary.com/dajxrr9ax/image/upload/v1751734833/pexels_mart_production_7643739_8ae6b5b739.jpg",
+              "previewUrl": null,
+              "provider": "cloudinary",
+              "provider_metadata": {
+                "public_id": "pexels_mart_production_7643739_8ae6b5b739",
+                "resource_type": "image"
+              },
+              "createdAt": "2025-07-05T17:00:34.428Z",
+              "updatedAt": "2025-07-05T17:00:34.428Z",
+              "publishedAt": "2025-07-05T17:00:34.429Z"
+            }
+          },
+          {
+            "id": {},
+            "Title": "Plug-and-Play Setup",
+            "Description": "Each hire arrives with pre-configured hardware, software, and secure access— ready to integrate seamlessly from day one.",
+            "ImagePath": null,
+            "Image": {
+              "id": {},
+              "documentId": "mbcyckuqrue2a6olgs7sl9bn",
+              "name": "pexels-pixabay-267507.jpg",
+              "alternativeText": null,
+              "caption": null,
+              "width": {},
+              "height": {},
+              "formats": {
+                "large": {
+                  "ext": ".jpg",
+                  "url": "https://res.cloudinary.com/dajxrr9ax/image/upload/v1751735073/large_pexels_pixabay_267507_2f5b59e3f1.jpg",
+                  "hash": "large_pexels_pixabay_267507_2f5b59e3f1",
+                  "mime": "image/jpeg",
+                  "name": "large_pexels-pixabay-267507.jpg",
+                  "path": null,
+                  "size": {},
+                  "width": {},
+                  "height": {},
+                  "sizeInBytes": {},
+                  "provider_metadata": {
+                    "public_id": "large_pexels_pixabay_267507_2f5b59e3f1",
+                    "resource_type": "image"
+                  }
+                },
+                "small": {
+                  "ext": ".jpg",
+                  "url": "https://res.cloudinary.com/dajxrr9ax/image/upload/v1751735073/small_pexels_pixabay_267507_2f5b59e3f1.jpg",
+                  "hash": "small_pexels_pixabay_267507_2f5b59e3f1",
+                  "mime": "image/jpeg",
+                  "name": "small_pexels-pixabay-267507.jpg",
+                  "path": null,
+                  "size": {},
+                  "width": {},
+                  "height": {},
+                  "sizeInBytes": {},
+                  "provider_metadata": {
+                    "public_id": "small_pexels_pixabay_267507_2f5b59e3f1",
+                    "resource_type": "image"
+                  }
+                },
+                "medium": {
+                  "ext": ".jpg",
+                  "url": "https://res.cloudinary.com/dajxrr9ax/image/upload/v1751735073/medium_pexels_pixabay_267507_2f5b59e3f1.jpg",
+                  "hash": "medium_pexels_pixabay_267507_2f5b59e3f1",
+                  "mime": "image/jpeg",
+                  "name": "medium_pexels-pixabay-267507.jpg",
+                  "path": null,
+                  "size": {},
+                  "width": {},
+                  "height": {},
+                  "sizeInBytes": {},
+                  "provider_metadata": {
+                    "public_id": "medium_pexels_pixabay_267507_2f5b59e3f1",
+                    "resource_type": "image"
+                  }
+                },
+                "thumbnail": {
+                  "ext": ".jpg",
+                  "url": "https://res.cloudinary.com/dajxrr9ax/image/upload/v1751735072/thumbnail_pexels_pixabay_267507_2f5b59e3f1.jpg",
+                  "hash": "thumbnail_pexels_pixabay_267507_2f5b59e3f1",
+                  "mime": "image/jpeg",
+                  "name": "thumbnail_pexels-pixabay-267507.jpg",
+                  "path": null,
+                  "size": {},
+                  "width": {},
+                  "height": {},
+                  "sizeInBytes": {},
+                  "provider_metadata": {
+                    "public_id": "thumbnail_pexels_pixabay_267507_2f5b59e3f1",
+                    "resource_type": "image"
+                  }
+                }
+              },
+              "hash": "pexels_pixabay_267507_2f5b59e3f1",
+              "ext": ".jpg",
+              "mime": "image/jpeg",
+              "size": {},
+              "url": "https://res.cloudinary.com/dajxrr9ax/image/upload/v1751735073/pexels_pixabay_267507_2f5b59e3f1.jpg",
+              "previewUrl": null,
+              "provider": "cloudinary",
+              "provider_metadata": {
+                "public_id": "pexels_pixabay_267507_2f5b59e3f1",
+                "resource_type": "image"
+              },
+              "createdAt": "2025-07-05T17:04:34.201Z",
+              "updatedAt": "2025-07-05T17:04:34.201Z",
+              "publishedAt": "2025-07-05T17:04:34.202Z"
+            }
+          },
+          {
+            "id": {},
+            "Title": "End-to-End Management",
+            "Description": "From contracts and payroll to daily coordination and support, we manage every detail so you don’t have to.",
+            "ImagePath": null,
+            "Image": {
+              "id": {},
+              "documentId": "q24f6myiylp80uyp7dchx816",
+              "name": "pexels-tima-miroshnichenko-6694545.jpg",
+              "alternativeText": null,
+              "caption": null,
+              "width": {},
+              "height": {},
+              "formats": {
+                "large": {
+                  "ext": ".jpg",
+                  "url": "https://res.cloudinary.com/dajxrr9ax/image/upload/v1751735279/large_pexels_tima_miroshnichenko_6694545_5d6e80c8b3.jpg",
+                  "hash": "large_pexels_tima_miroshnichenko_6694545_5d6e80c8b3",
+                  "mime": "image/jpeg",
+                  "name": "large_pexels-tima-miroshnichenko-6694545.jpg",
+                  "path": null,
+                  "size": {},
+                  "width": {},
+                  "height": {},
+                  "sizeInBytes": {},
+                  "provider_metadata": {
+                    "public_id": "large_pexels_tima_miroshnichenko_6694545_5d6e80c8b3",
+                    "resource_type": "image"
+                  }
+                },
+                "small": {
+                  "ext": ".jpg",
+                  "url": "https://res.cloudinary.com/dajxrr9ax/image/upload/v1751735279/small_pexels_tima_miroshnichenko_6694545_5d6e80c8b3.jpg",
+                  "hash": "small_pexels_tima_miroshnichenko_6694545_5d6e80c8b3",
+                  "mime": "image/jpeg",
+                  "name": "small_pexels-tima-miroshnichenko-6694545.jpg",
+                  "path": null,
+                  "size": {},
+                  "width": {},
+                  "height": {},
+                  "sizeInBytes": {},
+                  "provider_metadata": {
+                    "public_id": "small_pexels_tima_miroshnichenko_6694545_5d6e80c8b3",
+                    "resource_type": "image"
+                  }
+                },
+                "medium": {
+                  "ext": ".jpg",
+                  "url": "https://res.cloudinary.com/dajxrr9ax/image/upload/v1751735279/medium_pexels_tima_miroshnichenko_6694545_5d6e80c8b3.jpg",
+                  "hash": "medium_pexels_tima_miroshnichenko_6694545_5d6e80c8b3",
+                  "mime": "image/jpeg",
+                  "name": "medium_pexels-tima-miroshnichenko-6694545.jpg",
+                  "path": null,
+                  "size": {},
+                  "width": {},
+                  "height": {},
+                  "sizeInBytes": {},
+                  "provider_metadata": {
+                    "public_id": "medium_pexels_tima_miroshnichenko_6694545_5d6e80c8b3",
+                    "resource_type": "image"
+                  }
+                },
+                "thumbnail": {
+                  "ext": ".jpg",
+                  "url": "https://res.cloudinary.com/dajxrr9ax/image/upload/v1751735278/thumbnail_pexels_tima_miroshnichenko_6694545_5d6e80c8b3.jpg",
+                  "hash": "thumbnail_pexels_tima_miroshnichenko_6694545_5d6e80c8b3",
+                  "mime": "image/jpeg",
+                  "name": "thumbnail_pexels-tima-miroshnichenko-6694545.jpg",
+                  "path": null,
+                  "size": {},
+                  "width": {},
+                  "height": {},
+                  "sizeInBytes": {},
+                  "provider_metadata": {
+                    "public_id": "thumbnail_pexels_tima_miroshnichenko_6694545_5d6e80c8b3",
+                    "resource_type": "image"
+                  }
+                }
+              },
+              "hash": "pexels_tima_miroshnichenko_6694545_5d6e80c8b3",
+              "ext": ".jpg",
+              "mime": "image/jpeg",
+              "size": {},
+              "url": "https://res.cloudinary.com/dajxrr9ax/image/upload/v1751735278/pexels_tima_miroshnichenko_6694545_5d6e80c8b3.jpg",
+              "previewUrl": null,
+              "provider": "cloudinary",
+              "provider_metadata": {
+                "public_id": "pexels_tima_miroshnichenko_6694545_5d6e80c8b3",
+                "resource_type": "image"
+              },
+              "createdAt": "2025-07-05T17:08:00.245Z",
+              "updatedAt": "2025-07-05T17:08:00.245Z",
+              "publishedAt": "2025-07-05T17:08:00.246Z"
+            }
+          }
+        ]
+      },
+      {
+        "__component": "layout.contact-form",
+        "id": {},
+        "Title": "Get Started today",
+        "Description": "Why not contact us today and find the best people at the best rates for you business."
+      }
+    ]
+  },
+  "meta": {}
+}

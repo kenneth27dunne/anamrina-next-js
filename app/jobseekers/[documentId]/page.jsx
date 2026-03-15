@@ -1,10 +1,25 @@
-
 import { MapPin } from "lucide-react";
+import { notFound } from "next/navigation";
 import ContactForm from "../../components/ui/ContactForm";
 import { getJobListing } from "../../helpers/fetchHelper";
-import { BlocksRenderer } from "@strapi/blocks-react-renderer" 
+import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import ImageComponent from "../../components/ui/ImageComponent";
 import Hero from "../../components/strapiComponents/Hero";
+import { readFile } from "fs/promises";
+import path from "path";
+
+export async function generateStaticParams() {
+  if (process.env.DATA_SOURCE !== "local") return [];
+  try {
+    const filePath = path.join(process.cwd(), "data", "job-listings.json");
+    const content = await readFile(filePath, "utf-8");
+    const parsed = JSON.parse(content);
+    const jobs = parsed.data || [];
+    return jobs.map((job) => ({ documentId: job.documentId }));
+  } catch {
+    return [];
+  }
+}
 
 export const metadata = {
   title: "Job Listing - Anamrina Recruitment",
@@ -19,8 +34,11 @@ export const metadata = {
 };
 
 async function JobListing({ params }) {
-  const strapiData = await getJobListing(params.documentId);
-  const { FullDescription, Title, Location, Company, CompanyLogo } = strapiData.data[0];
+  const { documentId } = await params;
+  const strapiData = await getJobListing(documentId);
+  const job = strapiData?.data?.[0];
+  if (!job) notFound();
+  const { FullDescription, Title, Location, Company, CompanyLogo } = job;
 
   return (
     <>

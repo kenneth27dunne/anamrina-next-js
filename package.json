@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export-strapi": "node scripts/export-strapi-data.js"
   },
   "dependencies": {
     "@next/third-parties": "^15.5.4",

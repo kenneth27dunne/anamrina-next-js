@@ -32,7 +32,7 @@ const JobListings = ({ jobData }) => {
       <div className="sm:text-right mt-6">{total} result{total === 1? "" : "s"} found</div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {jobList.length > 0 ? (
-          jobList.map((job) => <JobCard key={job.id} job={job} />)
+          jobList.map((job, i) => <JobCard key={(typeof job?.id === 'number' || typeof job?.id === 'string') ? job.id : (job?.documentId || `job-${i}`)} job={job} />)
         ) : (
           <p className="text-gray-500 col-span-full text-center mt-6">
             No jobs found matching your search criteria.

@@ -1,0 +1,44 @@
+{
+  "data": [
+    {
+      "id": {},
+      "documentId": "ry65px47zv5jlfpejlnc7vad",
+      "createdAt": "2025-02-27T22:42:20.803Z",
+      "updatedAt": "2025-02-27T22:42:20.803Z",
+      "publishedAt": "2025-02-27T22:42:21.047Z",
+      "Title": "Technology & IT"
+    },
+    {
+      "id": {},
+      "documentId": "zl7ol3wbbac0sb0ct21iil7x",
+      "createdAt": "2025-02-27T22:42:48.035Z",
+      "updatedAt": "2025-02-27T22:42:48.035Z",
+      "publishedAt": "2025-02-27T22:42:48.618Z",
+      "Title": "Finance & Accounting"
+    },
+    {
+      "id": {},
+      "documentId": "f8aoe9bunqnhhtrioskr63n4",
+      "createdAt": "2025-02-27T22:43:10.200Z",
+      "updatedAt": "2025-02-27T22:43:10.200Z",
+      "publishedAt": "2025-02-27T22:43:10.451Z",
+      "Title": "Human Resources"
+    },
+    {
+      "id": {},
+      "documentId": "i0oj5aqcdh7pikj6334qzqgj",
+      "createdAt": "2025-02-27T22:43:30.655Z",
+      "updatedAt": "2025-02-27T22:43:30.655Z",
+      "publishedAt": "2025-02-27T22:43:30.912Z",
+      "Title": "Marketing & Sales"
+    }
+  ],
+  "meta": {
+    "pagination": {
+      "page": {},
+      "pageSize": {},
+      "pageCount": {},
+      "total": {}
+    }
+  }
+}

@@ -1,12 +1,4 @@
-import * as MdIcons from "react-icons/md";
-import * as FiIcons from "react-icons/fi";
-import * as FaIcons from "react-icons/fa";
-import * as RiIcons from "react-icons/ri";
-import * as HiIcons from "react-icons/hi";
-import * as BiIcons from "react-icons/bi";
-import * as TbIcons from "react-icons/tb";
-import * as AiIcons from "react-icons/ai";
-
+import { getIconComponent } from "./icons";
 import InfoCardSection from '../components/strapiComponents/InfoCardSection'
 import FeatureSection from '../components/strapiComponents/FeatureSection'
 import ServicesSection from '../components/strapiComponents/ServicesSection'
@@ -18,44 +10,41 @@ import TestimonialSlider from "../components/ui/TestimonialSlider";
 import { getJobListingsData } from "./fetchHelper";
 import DynamicContactFormClient from "../components/ui/DynamicContactFormClient";
 
+export { getIconComponent };
 
-export const getIconComponent = (iconName) => {
-  if(iconName === undefined || iconName.length <= 0) 
-    return null;
+function getBlockKey(block, index) {
+  if (typeof block?.id === 'number' || typeof block?.id === 'string') return block.id;
+  if (typeof block?.documentId === 'string') return block.documentId;
+  return `block-${index}`;
+}
 
-  iconName = iconName.trim();
-  return MdIcons[iconName] || FaIcons[iconName] || FiIcons[iconName] || AiIcons[iconName] 
-      || RiIcons[iconName] || HiIcons[iconName] || BiIcons[iconName] || TbIcons[iconName]
-      || null; // Default icon if not found
-};
-
-
-export const getBlockComponent = async (block, searchParams) => { 
+export const getBlockComponent = async (block, searchParams, index = 0) => { 
+  const key = getBlockKey(block, index);
   switch(block.__component.toLowerCase()) {
     case 'layout.info-card-block':      
-      return <InfoCardSection key={block.id} {...block} />
+      return <InfoCardSection key={key} {...block} />
 
     case 'layout.feature-block':
-      return <FeatureSection key={block.id} {...block} />
+      return <FeatureSection key={key} {...block} />
 
     case 'layout.service-block':
-      return <ServicesSection key={block.id} 
+      return <ServicesSection key={key} 
         title={block.Title}
         description={block.Description}
         services={block.Services}
         learnMoreLink={block.CallToActionURL}       
         /> 
     case 'layout.contact-form':
-      return <DynamicContactFormClient key={block.id} {...block} />;
+      return <DynamicContactFormClient key={key} {...block} />;
     case 'layout.testimonial-block':
-      return <TestimonialSlider key={block.id} {...block} />
+      return <TestimonialSlider key={key} {...block} />
     case 'component.job-listing':      
       let data = await getJobListingsData(searchParams)
-      return <JobListingsSection key={block.documentId} {...block} {...data} />
+      return <JobListingsSection key={key} {...block} {...data} />
     case 'layout.feature2-block':
-      return <Feature2Section key={block.id} {...block} />
+      return <Feature2Section key={key} {...block} />
     case 'layout.grid-image-cards':
-      return <GridImageCards key={block.id} {...block} />
+      return <GridImageCards key={key} {...block} />
     default: 
       return null;
   }

@@ -8,11 +8,11 @@ export default async function PageComponent({ isHomepage, path, fetchOptions, se
 
   const strapiData = await getStrapiData(path, fetchOptions);
 
-  if(strapiData.data === null) {
+  if (!strapiData?.data) {
     return <main />
   }
 
-  const { HeroSection, Blocks } = strapiData.data;
+  const { HeroSection, Blocks = [] } = strapiData.data;
 
   return (
     <>
@@ -27,7 +27,7 @@ export default async function PageComponent({ isHomepage, path, fetchOptions, se
         </header>
       }
       <main>
-        { Blocks.map(e => (getBlockComponent(e, searchParams))) }
+        { Blocks.map((e, i) => (getBlockComponent(e, searchParams, i))) }
       </main>
     </>
   )

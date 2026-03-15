@@ -2,7 +2,7 @@ import Link from 'next/link'
 import React from 'react'
 import ReactMarkdown from "react-markdown";
 import Image from 'next/image';
-import { getIconComponent } from "../../helpers/helpers";
+import { getIconComponent } from "../../helpers/icons";
 
 function Hero({ pill, title, description, isHomepage, CTA, isMini = false }) {
 
@@ -94,11 +94,14 @@ function Hero({ pill, title, description, isHomepage, CTA, isMini = false }) {
             isHomepage && CTA !== undefined && CTA.length > 0 &&
              <div className="pt-9">
                 {
-                    CTA.map((e) => (
-                        <Link key={e.id} href={e.url}>
+                    CTA.map((e, i) => {
+                      const key = (typeof e?.id === 'number' || typeof e?.id === 'string') ? e.id : (e?.url || `cta-${i}`);
+                      return (
+                        <Link key={key} href={e.url}>
                             <button className={`btn btn-lg btn-${e.IsPrimary? "primary" : "secondary"} mx-4 inline-block`}>{e.text}</button>
                         </Link>
-                    ))
+                      );
+                    })
                 }
             </div>
            }

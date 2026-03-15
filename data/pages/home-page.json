@@ -1,0 +1,591 @@
+{
+  "data": {
+    "id": {},
+    "documentId": "s8896q5g955sfqrnvrsrro2y",
+    "createdAt": "2025-02-11T11:33:15.928Z",
+    "updatedAt": "2025-07-21T10:06:35.901Z",
+    "publishedAt": "2025-07-21T10:06:36.314Z",
+    "HeroSection": {
+      "id": {},
+      "Pill": "Anamrina Recruitment ",
+      "Title": "Slash Your Staffing \nCost, **save up to 60%**",
+      "Description": "We help Irish businesses cut staffing costs by up to 60% by connecting them with fully-managed, remote professionals in accounting, IT, legal, and logistics -  equipped, supported, and ready to deliver.",
+      "CTA": [
+        {
+          "id": {},
+          "url": "https://talented-splendor-1ceaa2c3d3.strapiapp.com/howItWorks",
+          "text": "See How It Works",
+          "isExternal": false,
+          "IsPrimary": false
+        },
+        {
+          "id": {},
+          "url": "https://talented-splendor-1ceaa2c3d3.strapiapp.com/contact",
+          "text": "Get A Quote Today",
+          "isExternal": false,
+          "IsPrimary": {}
+        }
+      ]
+    },
+    "Blocks": [
+      {
+        "__component": "layout.info-card-block",
+        "id": {},
+        "Title": "Why Irish Businesses Choose Anamrina?",
+        "Description": "Irish businesses are under pressure to grow while keeping costs down. Anamrina helps you do both — by giving you instant access to qualified, remote professionals at a fraction of local hiring costs. We manage the recruitment, equipment, and day-to-day oversight so you can focus on results, not admin.",
+        "cards": [
+          {
+            "id": {},
+            "Title": "60% Lower Costs",
+            "Description": "Reduce staffing expenses without sacrificing quality.",
+            "iconName": "FiTrendingDown"
+          },
+          {
+            "id": {},
+            "Title": "We Manage Everything",
+            "Description": "From hiring to HR to hardware, we handle it all.",
+            "iconName": "MdManageAccounts"
+          },
+          {
+            "id": {},
+            "Title": "Fully Qualified Talent",
+            "Description": "Degree-holding professionals, fluent in English.",
+            "iconName": "FaUserGraduate"
+          },
+          {
+            "id": {},
+            "Title": "Custom-Built Teams",
+            "Description": "Scale as needed — no office, no long-term contracts.",
+            "iconName": "HiOutlineUsers"
+          }
+        ]
+      },
+      {
+        "__component": "layout.feature-block",
+        "id": {},
+        "Title": "Built to **Save** You **Time**",
+        "Description": "Skip the overhead, interviews, and infrastructure. With Anamrina, you get a fully equipped, fully managed professional who integrates directly into your business — no office space, no HR management, no stress.",
+        "featureImagePath": null,
+        "FeatureBullets": [
+          {
+            "id": {},
+            "Bullet": "We recruit and vet your staff"
+          },
+          {
+            "id": {},
+            "Bullet": "We provide the equipment and software"
+          },
+          {
+            "id": {},
+            "Bullet": "We manage HR, payroll, and reporting"
+          },
+          {
+            "id": {},
+            "Bullet": "You focus on results — we handle the rest"
+          }
+        ],
+        "callToAction": null,
+        "featureImage": {
+          "id": {},
+          "documentId": "kjnvmo2qm4nrfy1f9r1rpnpu",
+          "name": "peopleBackToBack.png",
+          "alternativeText": null,
+          "caption": null,
+          "width": {},
+          "height": {},
+          "formats": {
+            "large": {
+              "ext": ".png",
+              "url": "https://res.cloudinary.com/dajxrr9ax/image/upload/v1741250503/large_people_Back_To_Back_548157d527.png",
+              "hash": "large_people_Back_To_Back_548157d527",
+              "mime": "image/png",
+              "name": "large_peopleBackToBack.png",
+              "path": null,
+              "size": {},
+              "width": {},
+              "height": {},
+              "sizeInBytes": {},
+              "provider_metadata": {
+                "public_id": "large_people_Back_To_Back_548157d527",
+                "resource_type": "image"
+              }
+            },
+            "small": {
+              "ext": ".png",
+              "url": "https://res.cloudinary.com/dajxrr9ax/image/upload/v1741250503/small_people_Back_To_Back_548157d527.png",
+              "hash": "small_people_Back_To_Back_548157d527",
+              "mime": "image/png",
+              "name": "small_peopleBackToBack.png",
+              "path": null,
+              "size": {},
+              "width": {},
+              "height": {},
+              "sizeInBytes": {},
+              "provider_metadata": {
+                "public_id": "small_people_Back_To_Back_548157d527",
+                "resource_type": "image"
+              }
+            },
+            "medium": {
+              "ext": ".png",
+              "url": "https://res.cloudinary.com/dajxrr9ax/image/upload/v1741250504/medium_people_Back_To_Back_548157d527.png",
+              "hash": "medium_people_Back_To_Back_548157d527",
+              "mime": "image/png",
+              "name": "medium_peopleBackToBack.png",
+              "path": null,
+              "size": {},
+              "width": {},
+              "height": {},
+              "sizeInBytes": {},
+              "provider_metadata": {
+                "public_id": "medium_people_Back_To_Back_548157d527",
+                "resource_type": "image"
+              }
+            },
+            "thumbnail": {
+              "ext": ".png",
+              "url": "https://res.cloudinary.com/dajxrr9ax/image/upload/v1741250503/thumbnail_people_Back_To_Back_548157d527.png",
+              "hash": "thumbnail_people_Back_To_Back_548157d527",
+              "mime": "image/png",
+              "name": "thumbnail_peopleBackToBack.png",
+              "path": null,
+              "size": {},
+              "width": {},
+              "height": {},
+              "sizeInBytes": {},
+              "provider_metadata": {
+                "public_id": "thumbnail_people_Back_To_Back_548157d527",
+                "resource_type": "image"
+              }
+            }
+          },
+          "hash": "people_Back_To_Back_548157d527",
+          "ext": ".png",
+          "mime": "image/png",
+          "size": {},
+          "url": "https://res.cloudinary.com/dajxrr9ax/image/upload/v1741250503/people_Back_To_Back_548157d527.png",
+          "previewUrl": null,
+          "provider": "cloudinary",
+          "provider_metadata": {
+            "public_id": "people_Back_To_Back_548157d527",
+            "resource_type": "image"
+          },
+          "createdAt": "2025-03-06T08:41:44.531Z",
+          "updatedAt": "2025-03-06T08:41:44.531Z",
+          "publishedAt": "2025-03-06T08:41:44.533Z"
+        }
+      },
+      {
+        "__component": "layout.service-block",
+        "id": {},
+        "Title": "Professionals Ready to Power Your Business",
+        "Description": "We provide remote professionals across finance, tech, legal, and logistics — fully equipped, fully managed, and ready to deliver results from day one.",
+        "CallToActionURL": "/howItWorks",
+        "Services": [
+          {
+            "id": {},
+            "Title": "Tech & IT",
+            "Description": "Developers, sysadmins, and support engineers.",
+            "ImagePath": null,
+            "Image": {
+              "id": {},
+              "documentId": "ajqyvnwrnbpva2do2ufspz3k",
+              "name": "a29ae646-9b37-417f-bfcb-308511845dc3.png",
+              "alternativeText": null,
+              "caption": null,
+              "width": {},
+              "height": {},
+              "formats": {
+                "large": {
+                  "ext": ".png",
+                  "url": "https://res.cloudinary.com/dajxrr9ax/image/upload/v1751010188/large_a29ae646_9b37_417f_bfcb_308511845dc3_52d24c86b3.png",
+                  "hash": "large_a29ae646_9b37_417f_bfcb_308511845dc3_52d24c86b3",
+                  "mime": "image/png",
+                  "name": "large_a29ae646-9b37-417f-bfcb-308511845dc3.png",
+                  "path": null,
+                  "size": {},
+                  "width": {},
+                  "height": {},
+                  "sizeInBytes": {},
+                  "provider_metadata": {
+                    "public_id": "large_a29ae646_9b37_417f_bfcb_308511845dc3_52d24c86b3",
+                    "resource_type": "image"
+                  }
+                },
+                "small": {
+                  "ext": ".png",
+                  "url": "https://res.cloudinary.com/dajxrr9ax/image/upload/v1751010188/small_a29ae646_9b37_417f_bfcb_308511845dc3_52d24c86b3.png",
+                  "hash": "small_a29ae646_9b37_417f_bfcb_308511845dc3_52d24c86b3",
+                  "mime": "image/png",
+                  "name": "small_a29ae646-9b37-417f-bfcb-308511845dc3.png",
+                  "path": null,
+                  "size": {},
+                  "width": {},
+                  "height": {},
+                  "sizeInBytes": {},
+                  "provider_metadata": {
+                    "public_id": "small_a29ae646_9b37_417f_bfcb_308511845dc3_52d24c86b3",
+                    "resource_type": "image"
+                  }
+                },
+                "medium": {
+                  "ext": ".png",
+                  "url": "https://res.cloudinary.com/dajxrr9ax/image/upload/v1751010188/medium_a29ae646_9b37_417f_bfcb_308511845dc3_52d24c86b3.png",
+                  "hash": "medium_a29ae646_9b37_417f_bfcb_308511845dc3_52d24c86b3",
+                  "mime": "image/png",
+                  "name": "medium_a29ae646-9b37-417f-bfcb-308511845dc3.png",
+                  "path": null,
+                  "size": {},
+                  "width": {},
+                  "height": {},
+                  "sizeInBytes": {},
+                  "provider_metadata": {
+                    "public_id": "medium_a29ae646_9b37_417f_bfcb_308511845dc3_52d24c86b3",
+                    "resource_type": "image"
+                  }
+                },
+                "thumbnail": {
+                  "ext": ".png",
+                  "url": "https://res.cloudinary.com/dajxrr9ax/image/upload/v1751010187/thumbnail_a29ae646_9b37_417f_bfcb_308511845dc3_52d24c86b3.png",
+                  "hash": "thumbnail_a29ae646_9b37_417f_bfcb_308511845dc3_52d24c86b3",
+                  "mime": "image/png",
+                  "name": "thumbnail_a29ae646-9b37-417f-bfcb-308511845dc3.png",
+                  "path": null,
+                  "size": {},
+                  "width": {},
+                  "height": {},
+                  "sizeInBytes": {},
+                  "provider_metadata": {
+                    "public_id": "thumbnail_a29ae646_9b37_417f_bfcb_308511845dc3_52d24c86b3",
+                    "resource_type": "image"
+                  }
+                }
+              },
+              "hash": "a29ae646_9b37_417f_bfcb_308511845dc3_52d24c86b3",
+              "ext": ".png",
+              "mime": "image/png",
+              "size": {},
+              "url": "https://res.cloudinary.com/dajxrr9ax/image/upload/v1751010187/a29ae646_9b37_417f_bfcb_308511845dc3_52d24c86b3.png",
+              "previewUrl": null,
+              "provider": "cloudinary",
+              "provider_metadata": {
+                "public_id": "a29ae646_9b37_417f_bfcb_308511845dc3_52d24c86b3",
+                "resource_type": "image"
+              },
+              "createdAt": "2025-06-27T07:43:08.997Z",
+              "updatedAt": "2025-06-27T07:43:08.997Z",
+              "publishedAt": "2025-06-27T07:43:08.998Z"
+            }
+          },
+          {
+            "id": {},
+            "Title": "Finance & Accounting",
+            "Description": "Bookkeepers, payroll experts, and accountants.",
+            "ImagePath": null,
+            "Image": {
+              "id": {},
+              "documentId": "h4d1dtsq3qgmvhpjwru1ffxj",
+              "name": "Finance&Accounting.jpg",
+              "alternativeText": null,
+              "caption": null,
+              "width": {},
+              "height": {},
+              "formats": {
+                "large": {
+                  "ext": ".jpg",
+                  "url": "https://res.cloudinary.com/dajxrr9ax/image/upload/v1751731365/large_Finance_and_Accounting_e1919b905c.jpg",
+                  "hash": "large_Finance_and_Accounting_e1919b905c",
+                  "mime": "image/jpeg",
+                  "name": "large_Finance&Accounting.jpg",
+                  "path": null,
+                  "size": {},
+                  "width": {},
+                  "height": {},
+                  "sizeInBytes": {},
+                  "provider_metadata": {
+                    "public_id": "large_Finance_and_Accounting_e1919b905c",
+                    "resource_type": "image"
+                  }
+                },
+                "small": {
+                  "ext": ".jpg",
+                  "url": "https://res.cloudinary.com/dajxrr9ax/image/upload/v1751731365/small_Finance_and_Accounting_e1919b905c.jpg",
+                  "hash": "small_Finance_and_Accounting_e1919b905c",
+                  "mime": "image/jpeg",
+                  "name": "small_Finance&Accounting.jpg",
+                  "path": null,
+                  "size": {},
+                  "width": {},
+                  "height": {},
+                  "sizeInBytes": {},
+                  "provider_metadata": {
+                    "public_id": "small_Finance_and_Accounting_e1919b905c",
+                    "resource_type": "image"
+                  }
+                },
+                "medium": {
+                  "ext": ".jpg",
+                  "url": "https://res.cloudinary.com/dajxrr9ax/image/upload/v1751731365/medium_Finance_and_Accounting_e1919b905c.jpg",
+                  "hash": "medium_Finance_and_Accounting_e1919b905c",
+                  "mime": "image/jpeg",
+                  "name": "medium_Finance&Accounting.jpg",
+                  "path": null,
+                  "size": {},
+                  "width": {},
+                  "height": {},
+                  "sizeInBytes": {},
+                  "provider_metadata": {
+                    "public_id": "medium_Finance_and_Accounting_e1919b905c",
+                    "resource_type": "image"
+                  }
+                },
+                "thumbnail": {
+                  "ext": ".jpg",
+                  "url": "https://res.cloudinary.com/dajxrr9ax/image/upload/v1751731364/thumbnail_Finance_and_Accounting_e1919b905c.jpg",
+                  "hash": "thumbnail_Finance_and_Accounting_e1919b905c",
+                  "mime": "image/jpeg",
+                  "name": "thumbnail_Finance&Accounting.jpg",
+                  "path": null,
+                  "size": {},
+                  "width": {},
+                  "height": {},
+                  "sizeInBytes": {},
+                  "provider_metadata": {
+                    "public_id": "thumbnail_Finance_and_Accounting_e1919b905c",
+                    "resource_type": "image"
+                  }
+                }
+              },
+              "hash": "Finance_and_Accounting_e1919b905c",
+              "ext": ".jpg",
+              "mime": "image/jpeg",
+              "size": {},
+              "url": "https://res.cloudinary.com/dajxrr9ax/image/upload/v1751731364/Finance_and_Accounting_e1919b905c.jpg",
+              "previewUrl": null,
+              "provider": "cloudinary",
+              "provider_metadata": {
+                "public_id": "Finance_and_Accounting_e1919b905c",
+                "resource_type": "image"
+              },
+              "createdAt": "2025-07-05T16:02:46.065Z",
+              "updatedAt": "2025-07-05T16:02:46.065Z",
+              "publishedAt": "2025-07-05T16:02:46.068Z"
+            }
+          },
+          {
+            "id": {},
+            "Title": "Admin & Operations",
+            "Description": "Legal assistants, logistics staff, and coordinators.",
+            "ImagePath": null,
+            "Image": {
+              "id": {},
+              "documentId": "g20lg9enx6256z45eke9e8hn",
+              "name": "6be14f29-30e5-480a-b2c5-63e4e5bb31cf.png",
+              "alternativeText": null,
+              "caption": null,
+              "width": {},
+              "height": {},
+              "formats": {
+                "large": {
+                  "ext": ".png",
+                  "url": "https://res.cloudinary.com/dajxrr9ax/image/upload/v1751010294/large_6be14f29_30e5_480a_b2c5_63e4e5bb31cf_b9b713a1d8.png",
+                  "hash": "large_6be14f29_30e5_480a_b2c5_63e4e5bb31cf_b9b713a1d8",
+                  "mime": "image/png",
+                  "name": "large_6be14f29-30e5-480a-b2c5-63e4e5bb31cf.png",
+                  "path": null,
+                  "size": {},
+                  "width": {},
+                  "height": {},
+                  "sizeInBytes": {},
+                  "provider_metadata": {
+                    "public_id": "large_6be14f29_30e5_480a_b2c5_63e4e5bb31cf_b9b713a1d8",
+                    "resource_type": "image"
+                  }
+                },
+                "small": {
+                  "ext": ".png",
+                  "url": "https://res.cloudinary.com/dajxrr9ax/image/upload/v1751010294/small_6be14f29_30e5_480a_b2c5_63e4e5bb31cf_b9b713a1d8.png",
+                  "hash": "small_6be14f29_30e5_480a_b2c5_63e4e5bb31cf_b9b713a1d8",
+                  "mime": "image/png",
+                  "name": "small_6be14f29-30e5-480a-b2c5-63e4e5bb31cf.png",
+                  "path": null,
+                  "size": {},
+                  "width": {},
+                  "height": {},
+                  "sizeInBytes": {},
+                  "provider_metadata": {
+                    "public_id": "small_6be14f29_30e5_480a_b2c5_63e4e5bb31cf_b9b713a1d8",
+                    "resource_type": "image"
+                  }
+                },
+                "medium": {
+                  "ext": ".png",
+                  "url": "https://res.cloudinary.com/dajxrr9ax/image/upload/v1751010294/medium_6be14f29_30e5_480a_b2c5_63e4e5bb31cf_b9b713a1d8.png",
+                  "hash": "medium_6be14f29_30e5_480a_b2c5_63e4e5bb31cf_b9b713a1d8",
+                  "mime": "image/png",
+                  "name": "medium_6be14f29-30e5-480a-b2c5-63e4e5bb31cf.png",
+                  "path": null,
+                  "size": {},
+                  "width": {},
+                  "height": {},
+                  "sizeInBytes": {},
+                  "provider_metadata": {
+                    "public_id": "medium_6be14f29_30e5_480a_b2c5_63e4e5bb31cf_b9b713a1d8",
+                    "resource_type": "image"
+                  }
+                },
+                "thumbnail": {
+                  "ext": ".png",
+                  "url": "https://res.cloudinary.com/dajxrr9ax/image/upload/v1751010293/thumbnail_6be14f29_30e5_480a_b2c5_63e4e5bb31cf_b9b713a1d8.png",
+                  "hash": "thumbnail_6be14f29_30e5_480a_b2c5_63e4e5bb31cf_b9b713a1d8",
+                  "mime": "image/png",
+                  "name": "thumbnail_6be14f29-30e5-480a-b2c5-63e4e5bb31cf.png",
+                  "path": null,
+                  "size": {},
+                  "width": {},
+                  "height": {},
+                  "sizeInBytes": {},
+                  "provider_metadata": {
+                    "public_id": "thumbnail_6be14f29_30e5_480a_b2c5_63e4e5bb31cf_b9b713a1d8",
+                    "resource_type": "image"
+                  }
+                }
+              },
+              "hash": "6be14f29_30e5_480a_b2c5_63e4e5bb31cf_b9b713a1d8",
+              "ext": ".png",
+              "mime": "image/png",
+              "size": {},
+              "url": "https://res.cloudinary.com/dajxrr9ax/image/upload/v1751010293/6be14f29_30e5_480a_b2c5_63e4e5bb31cf_b9b713a1d8.png",
+              "previewUrl": null,
+              "provider": "cloudinary",
+              "provider_metadata": {
+                "public_id": "6be14f29_30e5_480a_b2c5_63e4e5bb31cf_b9b713a1d8",
+                "resource_type": "image"
+              },
+              "createdAt": "2025-06-27T07:44:55.505Z",
+              "updatedAt": "2025-07-05T16:58:07.768Z",
+              "publishedAt": "2025-06-27T07:44:55.507Z"
+            }
+          }
+        ]
+      },
+      {
+        "__component": "layout.feature2-block",
+        "id": {},
+        "Title": "Smart Staffing, **Fully Managed**",
+        "Description": "Anamrina doesn’t just connect you with professionals — we ensure your remote team is equipped, supported, and managed for success. From hardware to HR, we build a system around the talent so you get results without the hassle.",
+        "ImagePath": null,
+        "Features": [
+          {
+            "id": {},
+            "Title": "Managed Remote Setup",
+            "Description": "We provide your team with the equipment, software, and secure access they need — no setup on your side required.",
+            "IconImagePath": "/office-icon.png"
+          },
+          {
+            "id": {},
+            "Title": "Ongoing Oversight & Support",
+            "Description": "We handle HR, payroll, and day-to-day team management — so you can focus on your business.",
+            "IconImagePath": "/puzzle.png"
+          }
+        ],
+        "Image": {
+          "id": {},
+          "documentId": "spbsfns906erw34nilikqlcs",
+          "name": "skills-matching.png",
+          "alternativeText": null,
+          "caption": null,
+          "width": {},
+          "height": {},
+          "formats": {
+            "large": {
+              "ext": ".png",
+              "url": "https://res.cloudinary.com/dajxrr9ax/image/upload/v1741250626/large_skills_matching_66a807c570.png",
+              "hash": "large_skills_matching_66a807c570",
+              "mime": "image/png",
+              "name": "large_skills-matching.png",
+              "path": null,
+              "size": {},
+              "width": {},
+              "height": {},
+              "sizeInBytes": {},
+              "provider_metadata": {
+                "public_id": "large_skills_matching_66a807c570",
+                "resource_type": "image"
+              }
+            },
+            "small": {
+              "ext": ".png",
+              "url": "https://res.cloudinary.com/dajxrr9ax/image/upload/v1741250626/small_skills_matching_66a807c570.png",
+              "hash": "small_skills_matching_66a807c570",
+              "mime": "image/png",
+              "name": "small_skills-matching.png",
+              "path": null,
+              "size": {},
+              "width": {},
+              "height": {},
+              "sizeInBytes": {},
+              "provider_metadata": {
+                "public_id": "small_skills_matching_66a807c570",
+                "resource_type": "image"
+              }
+            },
+            "medium": {
+              "ext": ".png",
+              "url": "https://res.cloudinary.com/dajxrr9ax/image/upload/v1741250625/medium_skills_matching_66a807c570.png",
+              "hash": "medium_skills_matching_66a807c570",
+              "mime": "image/png",
+              "name": "medium_skills-matching.png",
+              "path": null,
+              "size": {},
+              "width": {},
+              "height": {},
+              "sizeInBytes": {},
+              "provider_metadata": {
+                "public_id": "medium_skills_matching_66a807c570",
+                "resource_type": "image"
+              }
+            },
+            "thumbnail": {
+              "ext": ".png",
+              "url": "https://res.cloudinary.com/dajxrr9ax/image/upload/v1741250625/thumbnail_skills_matching_66a807c570.png",
+              "hash": "thumbnail_skills_matching_66a807c570",
+              "mime": "image/png",
+              "name": "thumbnail_skills-matching.png",
+              "path": null,
+              "size": {},
+              "width": {},
+              "height": {},
+              "sizeInBytes": {},
+              "provider_metadata": {
+                "public_id": "thumbnail_skills_matching_66a807c570",
+                "resource_type": "image"
+              }
+            }
+          },
+          "hash": "skills_matching_66a807c570",
+          "ext": ".png",
+          "mime": "image/png",
+          "size": {},
+          "url": "https://res.cloudinary.com/dajxrr9ax/image/upload/v1741250625/skills_matching_66a807c570.png",
+          "previewUrl": null,
+          "provider": "cloudinary",
+          "provider_metadata": {
+            "public_id": "skills_matching_66a807c570",
+            "resource_type": "image"
+          },
+          "createdAt": "2025-03-06T08:43:46.760Z",
+          "updatedAt": "2025-03-06T08:43:46.760Z",
+          "publishedAt": "2025-03-06T08:43:46.760Z"
+        }
+      },
+      {
+        "__component": "layout.contact-form",
+        "id": {},
+        "Title": "Get In Touch With Us",
+        "Description": "Let us know what you think"
+      }
+    ]
+  },
+  "meta": {}
+}

@@ -1,0 +1,25 @@
+{
+  "data": {
+    "id": {},
+    "documentId": "a639tsar7icsqgob93p3cthz",
+    "createdAt": "2025-02-27T22:46:29.088Z",
+    "updatedAt": "2025-03-01T12:21:49.622Z",
+    "publishedAt": "2025-03-01T12:21:50.403Z",
+    "HeroSection": {
+      "id": {},
+      "Pill": "For Job Seekers",
+      "Title": "Your dream job is \njust a **click away**",
+      "Description": "Browse through our  job listings to find your perfect fit",
+      "CTA": []
+    },
+    "Blocks": [
+      {
+        "__component": "component.job-listing",
+        "id": {},
+        "IncludeCategories": {},
+        "IncludeSearch": {}
+      }
+    ]
+  },
+  "meta": {}
+}

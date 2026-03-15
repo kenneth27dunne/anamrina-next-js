@@ -1,0 +1,25 @@
+{
+  "data": {
+    "id": {},
+    "documentId": "v4z9h3swz11ayo0i22ybv0d7",
+    "createdAt": "2025-02-26T22:41:43.722Z",
+    "updatedAt": "2025-02-26T23:01:38.812Z",
+    "publishedAt": "2025-02-26T23:01:41.019Z",
+    "HeroSection": {
+      "id": {},
+      "Pill": "Contact Us",
+      "Title": "We're ready to support\nyour **recruitment journey**",
+      "Description": "Get in Touch – We're Ready to Support Your Recruitment Journey! Whether you're a job seeker or an employer, our team is here to assist you with all your inquiries. Reach out to us today!",
+      "CTA": []
+    },
+    "Blocks": [
+      {
+        "__component": "layout.contact-form",
+        "id": {},
+        "Title": null,
+        "Description": null
+      }
+    ]
+  },
+  "meta": {}
+}

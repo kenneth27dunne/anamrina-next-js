@@ -1,0 +1,157 @@
+{
+  "data": {
+    "id": {},
+    "documentId": "kc7fajj28tl4kqkrw2yzm3fa",
+    "createdAt": "2025-02-27T21:40:51.113Z",
+    "updatedAt": "2025-07-11T11:22:26.211Z",
+    "publishedAt": "2025-07-11T11:22:26.415Z",
+    "HeroSection": {
+      "id": {},
+      "Pill": "About Us",
+      "Title": "**Empowering** Your\nRecruitment **Success**",
+      "Description": "We provide expert recruitment solutions tailored to businesses and job seekers alike. Whether you need top-tier talent or your next career opportunity, our team ensures seamless hiring, personalized support, and efficient staffing solutions. Let’s build your future together—contact us today!",
+      "CTA": []
+    },
+    "Blocks": [
+      {
+        "__component": "layout.feature-block",
+        "id": {},
+        "Title": "Expert **Recruitment Solutions**",
+        "Description": "We match businesses with top-tier talent for seamless integration and growth.",
+        "featureImagePath": "/handsWithJigsaw.png",
+        "FeatureBullets": [
+          {
+            "id": {},
+            "Bullet": "We connect businesses with top-tier professionals across various industries."
+          },
+          {
+            "id": {},
+            "Bullet": "Custom-tailored recruitment services to find the perfect match for your needs."
+          },
+          {
+            "id": {},
+            "Bullet": "Pre-vetted candidates ensure seamless onboarding and quick integration into your teams."
+          },
+          {
+            "id": {},
+            "Bullet": "Ongoing support and workforce solutions to help your business scale efficiently."
+          }
+        ],
+        "callToAction": null,
+        "featureImage": null
+      },
+      {
+        "__component": "layout.info-card-block",
+        "id": {},
+        "Title": "Explore Our Range of Remote Professionals",
+        "Description": "At Anamrina, we help Irish businesses find qualified, remote-ready professionals across a verity of key functions. From junior staff with strong foundational skills to senior specialists with years of industry experience, we connect you with the talent that matches your exact needs.",
+        "cards": [
+          {
+            "id": {},
+            "Title": "Accounting & Bookkeeping",
+            "Description": "From junior bookkeepers to senior accountants.",
+            "iconName": "FaFileInvoice"
+          },
+          {
+            "id": {},
+            "Title": "Legal Support ",
+            "Description": "Legal assistants, researchers, and compliance staff.",
+            "iconName": "FaGraduationCap"
+          },
+          {
+            "id": {},
+            "Title": "Finance Support",
+            "Description": "Payroll, invoicing, reconciliations, reporting.",
+            "iconName": "FaMoneyCheckAlt"
+          },
+          {
+            "id": {},
+            "Title": "Admin & Data Entry",
+            "Description": "General admin, CRM updates, scheduling, data handling.",
+            "iconName": "FaRegClipboard"
+          },
+          {
+            "id": {},
+            "Title": "Customer Support ",
+            "Description": "Inbound/outbound support, email/chat agents.",
+            "iconName": "FaComments"
+          },
+          {
+            "id": {},
+            "Title": "Tech & IT Support ",
+            "Description": "Software testers, helpdesk, remote IT assistants.",
+            "iconName": "FaTools"
+          },
+          {
+            "id": {},
+            "Title": "Logistics Coordination",
+            "Description": "Shipment tracking, vendor communication, B2B support.",
+            "iconName": "FaTruckMoving"
+          },
+          {
+            "id": {},
+            "Title": "Digital & Web Support",
+            "Description": "Content editors, CMS admins, basic web tasks.",
+            "iconName": "FaGlobe"
+          }
+        ]
+      },
+      {
+        "__component": "layout.grid-image-cards",
+        "id": {},
+        "Title": "Premium Managed **Office Space**",
+        "Description": "Boost productivity with our fully equipped office spaces designed for professionals and businesses. Whether you need a flexible workspace, high-speed connectivity, or 24/7 secure access, we provide everything to support your success.",
+        "Cards": [
+          {
+            "id": {},
+            "Title": null,
+            "Description": "Our state-of-the-art office spaces provide everything professionals need to thrive.",
+            "ImagePath": "/office-space.jpeg",
+            "Image": null
+          },
+          {
+            "id": {},
+            "Title": "",
+            "Description": "Fully equipped workspaces with high-speed internet, ergonomic furniture, and meeting rooms.",
+            "ImagePath": "/conference-room.jpeg",
+            "Image": null
+          },
+          {
+            "id": {},
+            "Title": null,
+            "Description": "Secure access, 24/7 availability, and premium support services.",
+            "ImagePath": "/access-key.jpeg",
+            "Image": null
+          }
+        ]
+      },
+      {
+        "__component": "layout.info-card-block",
+        "id": {},
+        "Title": "Temporary Staffing Services",
+        "Description": "Our Temporary Staffing Services provide businesses with quick access to skilled professionals for short-term projects, urgent hiring needs, and flexible employment solutions. Whether you need immediate support or specialized expertise, we help you scale your workforce efficiently.",
+        "cards": [
+          {
+            "id": {},
+            "Title": "Rapid Staffing Solutions",
+            "Description": "Quick and efficient staffing solutions for your short-term projects.",
+            "iconName": "MdFlashOn"
+          },
+          {
+            "id": {},
+            "Title": "Immediate Talent Access",
+            "Description": "Access a network of highly skilled professionals ready to work immediately.",
+            "iconName": "FaUsersCog"
+          },
+          {
+            "id": {},
+            "Title": "Flexible Hiring Options",
+            "Description": "Flexible hiring options with contract-based employment support.",
+            "iconName": "MdWorkOutline"
+          }
+        ]
+      }
+    ]
+  },
+  "meta": {}
+}

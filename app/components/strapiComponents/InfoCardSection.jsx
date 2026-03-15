@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import ReactMarkdown from "react-markdown";
 import InfoCard from "../ui/InfoCard";
-import { getIconComponent }  from "../../helpers/helpers";
+import { getIconComponent } from "../../helpers/icons";
 
 function InfoCardSection({ Title, Description, cards }) {
   const [activeIndex, setActiveIndex] = useState(1);
