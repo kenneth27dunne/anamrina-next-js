@@ -1,5 +1,4 @@
-import React from 'react'
-import PageComponent from '../components/pageComponent'
+import ReferenceAbout from "../components/reference/ReferenceAbout";
 
 export const metadata = {
   title: "About Us - Anamrina Recruitment",
@@ -16,7 +15,5 @@ export const metadata = {
 };
 
 export default function About() {
-  return (
-      <PageComponent path="/api/about-page" isHomepage={false} fetchOptions={{ next: { revalidate: 3200 } }} />
-  )
+  return <ReferenceAbout />;
 }

@@ -37,21 +37,22 @@
     margin-top: auto;
   }
   
-  section {
+  /* Reference marketing uses .section-pad + inline padding; do not strip with !important */
+  section:not(.section-pad) {
     @apply
       !m-0
       !pb-0
       !pt-0   
   }
-  section:nth-child(3n + 1) {
+  section:not(.section-pad):nth-child(3n + 1) {
 
     background: #fff;
   }
-  section:nth-child(2n + 2) {
+  section:not(.section-pad):nth-child(2n + 2) {
     background: #f7f9ff;
     /* background: #e9eefd; */
   }
-  section:nth-child(3n) {
+  section:not(.section-pad):nth-child(3n) {
 
     /* background: #d2deff; */
   }

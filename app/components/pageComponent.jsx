@@ -16,16 +16,17 @@ export default async function PageComponent({ isHomepage, path, fetchOptions, se
 
   return (
     <>
-      {
-        HeroSection &&
+      {isHomepage && HeroSection && (
         <header>
-          <Hero isHomepage={isHomepage} 
-                pill={HeroSection.Pill} 
-                title={HeroSection.Title} 
-                description={HeroSection.Description} 
-                CTA={HeroSection.CTA} />
+          <Hero
+            isHomepage={isHomepage}
+            pill={HeroSection.Pill}
+            title={HeroSection.Title}
+            description={HeroSection.Description}
+            CTA={HeroSection.CTA}
+          />
         </header>
-      }
+      )}
       <main>
         { Blocks.map((e, i) => (getBlockComponent(e, searchParams, i))) }
       </main>

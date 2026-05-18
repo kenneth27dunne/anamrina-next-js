@@ -1,84 +1,76 @@
-import React from "react";
-import Link from "next/link";
 import Image from "next/image";
-import { FaFacebook, FaInstagram, FaLinkedinIn } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
-import SocialIconWrapper from "../ui/SocialIconWrapper";
-import Logo from '../../assets/Full name gradient white_300x87.png'
+import Link from "next/link";
+import whiteLogo from "../../assets/Full name gradient white_300x87.png";
 
-const Footer = () => {
+const C = {
+  deep: "#111C28",
+  cyan: "#00B4D8",
+};
+
+const sans = `"Plus Jakarta Sans", "Segoe UI", system-ui, sans-serif`;
+
+const footerColumns = [
+  {
+    title: "Company",
+    links: [
+      { label: "About", href: "/about" },
+      { label: "How It Works", href: "/howItWorks" },
+      { label: "Pricing", href: "/pricing" },
+    ],
+  },
+  {
+    title: "Get Started",
+    links: [
+      { label: "Book a Call", href: "/contact" },
+      { label: "Get a Quote", href: "/contact" },
+    ],
+  },
+  {
+    title: "Contact",
+    links: [
+      { label: "info@anamrinarecruitment.com", href: "mailto:info@anamrinarecruitment.com" },
+      { label: "ger@anamrina.com", href: "mailto:ger@anamrina.com" },
+      { label: "+353 87 240 0364", href: "tel:+353872400364" },
+      { label: "Zirakpur, Punjab, India", href: null },
+    ],
+  },
+];
+
+export default function Footer() {
   return (
-    <footer className="bg-[#08163B] text-white py-12">
-      <div className="container mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 sm:grid-cols-4 gap-12">
-          {/* Left Section - Logo & About */}
+    <footer style={{ background: C.deep, padding: "56px 48px 24px" }} className="section-pad">
+      <div style={{ maxWidth: "1100px", margin: "0 auto" }}>
+        <div style={{ marginBottom: "44px" }} className="footer-grid">
           <div>
-            <Image src={Logo} alt="Anamrina Logo" width={500} height={150} />
-            <p className="mt-4 text-sm text-gray-300">
-              Connecting skilled professionals with your businesses for seamless remote work solutions. Your bridge to talent and productivity.
+            <div style={{ marginBottom: "14px" }}>
+              <Image src={whiteLogo} alt="Anamrina Recruitment" width={150} height={34} style={{ height: "30px", width: "auto" }} />
+            </div>
+            <p style={{ fontFamily: sans, fontSize: "0.78rem", color: "#ffffff", lineHeight: 1.75, maxWidth: "240px" }}>
+              Experienced Indian Accountants & Bookkeepers working remotely, backed by Irish management in India.
             </p>
           </div>
-
-          {/* Quick Links */}
-          <div>
-            <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
-            <ul className="space-y-2 text-sm">
-              <li><Link href="/">Home</Link></li>
-              <li><Link href="/about">About Us</Link></li>
-              <li><Link href="/howItWorks">How It Works</Link></li>
-              <li><Link href="/contact">Contact Us</Link></li>
-            </ul>
-          </div>
-
-          {/* Ireland Office */}
-          <div>
-            <h3 className="font-semibold text-lg mb-4">Ireland Office</h3>
-            <div className="text-sm text-gray-300 space-y-2">
-              <p>
-                95 Millennium Business Park,<br />
-                Cappagh Road, Ballycoolin,<br />
-                Dublin 11, D11 YK25, Ireland
-              </p>
-              <p>
-                <span className="font-medium">Phone:</span> +353 858 239 516
-              </p>
-              <p>
-                <span className="font-medium">Email:</span><br />
-                <a href="mailto:info@anamrinarecruitment.com" className="text-blue-300 hover:text-blue-200 transition-colors">
-                  info@anamrinarecruitment.com
-                </a>
-              </p>
+          {footerColumns.map((col) => (
+            <div key={col.title}>
+              <div style={{ fontFamily: sans, fontSize: "0.62rem", fontWeight: 800, letterSpacing: "0.14em", textTransform: "uppercase", color: C.cyan, marginBottom: "16px" }}>{col.title}</div>
+              {col.links.map((link) =>
+                link.href ? (
+                  <Link key={link.label} href={link.href} className="footer-link">
+                    {link.label}
+                  </Link>
+                ) : (
+                  <span key={link.label} style={{ color: "#ffffff", fontFamily: sans, fontSize: "0.8rem", marginBottom: "8px", display: "block" }}>
+                    {link.label}
+                  </span>
+                )
+              )}
             </div>
-          </div>
-
-          {/* India Office */}
-          <div>
-            <h3 className="font-semibold text-lg mb-4">India Office</h3>
-            <div className="text-sm text-gray-300 space-y-2">
-              <p>
-                613-617, 6th Floor,<br />
-                Motiaz Royal Business Park,<br />
-                Zirakpur - 140603, Punjab, India
-              </p>
-              <p>
-                <span className="font-medium">Phone:</span> +91 896 819 0404<br />
-                <span className="font-medium">Phone:</span> +91 987 879 3002
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
-
-        {/* Bottom Section */}
-        <div className="mt-8 border-t border-gray-600 pt-6 flex flex-col md:flex-row justify-between text-sm">
-          <p>©{new Date().getFullYear()} All Rights Reserved</p>
-          <div className="flex space-x-4">
-            <Link href="/privacy-policy" className="hover:text-blue-300 transition-colors">Privacy Policy</Link>
-            <Link href="/cookies-policy" className="hover:text-blue-300 transition-colors">Cookies Policy</Link>
-          </div>
+        <div style={{ borderTop: "1px solid rgba(255,255,255,0.07)", paddingTop: "20px", display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "8px", fontFamily: sans, fontSize: "0.68rem", color: "#ffffff" }}>
+          <span>© {new Date().getFullYear()} Anamrina Recruitment Solutions Pvt Ltd. All rights reserved.</span>
+          <span>Dublin, Ireland · Zirakpur, Punjab, India</span>
         </div>
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

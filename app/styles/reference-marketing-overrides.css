@@ -1,0 +1,64 @@
+/* Load after reference-marketing.css. Undo global base/layout rules inside the reference shell. */
+
+.anamrina-ref-site .hero-h1 span,
+.anamrina-ref-site h1.hero-h1 span {
+  color: #00b4d8 !important;
+  font-size: inherit !important;
+  line-height: inherit !important;
+  font-weight: inherit !important;
+  font-family: inherit !important;
+  text-transform: none !important;
+}
+
+.anamrina-ref-site main h1:not(.hero-h1) span,
+.anamrina-ref-site main h1:not(.hero-h1) strong,
+.anamrina-ref-site main h1:not(.hero-h1) b,
+.anamrina-ref-site main h1:not(.hero-h1) i,
+.anamrina-ref-site main h1:not(.hero-h1) div,
+.anamrina-ref-site h2 span,
+.anamrina-ref-site h2 strong,
+.anamrina-ref-site h2 b,
+.anamrina-ref-site h2 i,
+.anamrina-ref-site h2 div {
+  color: inherit !important;
+  font-size: inherit !important;
+  line-height: inherit !important;
+  font-weight: inherit !important;
+  font-family: inherit !important;
+  text-transform: none !important;
+}
+
+.anamrina-ref-site main h3 {
+  font-size: revert;
+  font-weight: revert;
+  line-height: revert;
+}
+
+.anamrina-ref-site .btn-primary {
+  background: #00b4d8 !important;
+  color: #111c28 !important;
+  border: none !important;
+  border-radius: 8px !important;
+  font-weight: 800 !important;
+}
+
+.anamrina-ref-site .btn-ghost {
+  background: transparent !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+}
+
+.anamrina-ref-site .btn-outline {
+  color: #111c28 !important;
+  background: transparent !important;
+  border: 2px solid #111c28 !important;
+}
+
+.anamrina-ref-site nav {
+  height: auto !important;
+  min-height: unset;
+  box-shadow: none !important;
+  position: relative;
+  z-index: 100;
+  overflow: visible;
+}

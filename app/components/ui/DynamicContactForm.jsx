@@ -6,6 +6,7 @@ const Select = CreatableSelect;
 import { FaPhone } from "react-icons/fa6";
 import { IoIosMail, IoIosPin } from "react-icons/io";
 import { LuAlarmClock } from "react-icons/lu";
+import { Arr, lbl } from "../reference/Primitives";
 
 const customSelectStyles = {
   control: (provided, state) => ({
@@ -57,6 +58,32 @@ const customSelectStyles = {
     cursor: 'pointer',
   }),
   indicatorSeparator: () => ({ display: 'none' }),
+};
+
+const referenceSelectStyles = {
+  control: (provided, state) => ({
+    ...provided,
+    backgroundColor: "#FFFFFF",
+    borderColor: state.isFocused ? "#00B4D8" : "#E2E8EF",
+    borderRadius: "8px",
+    minHeight: "48px",
+    boxShadow: state.isFocused ? "0 0 0 3px rgba(0,180,216,0.12)" : "none",
+    fontSize: "0.88rem",
+    outline: "none",
+    "&:hover": { borderColor: "#00B4D8" },
+  }),
+  valueContainer: (provided) => ({ ...provided, padding: 0 }),
+  input: (provided) => ({ ...provided, margin: 0, padding: 0 }),
+  singleValue: (provided) => ({ ...provided, color: "#111C28" }),
+  placeholder: (provided) => ({ ...provided, color: "#718096", fontSize: "0.88rem" }),
+  menu: (provided) => ({ ...provided, borderRadius: "8px", zIndex: 30 }),
+  option: (provided, state) => ({
+    ...provided,
+    backgroundColor: state.isSelected ? "#00B4D8" : state.isFocused ? "#E6F7FB" : "#fff",
+    color: state.isSelected ? "#111C28" : "#111C28",
+    cursor: "pointer",
+  }),
+  indicatorSeparator: () => ({ display: "none" }),
 };
 
 const roleOptions = [
@@ -150,10 +177,11 @@ const dynamicFields = {
   ),
 };
 
-export default function DynamicContactForm({ Title, Description }) {
+export default function DynamicContactForm({ Title, Description, variant }) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    company: "",
     role: "",
     experience: "",
     message: "",
@@ -226,13 +254,110 @@ export default function DynamicContactForm({ Title, Description }) {
     if (res.ok) {
       setSuccessMessage("Message sent successfully!");
       setErrorMessage("");
-      setFormData({ name: "", email: "", role: "", experience: "", message: "" });
+      setFormData({ name: "", email: "", company: "", role: "", experience: "", message: "" });
       setErrors({});
     } else {
       setSuccessMessage("");
       setErrorMessage("Failed to send message. Try again later.");
     }
   };
+
+  const selectStyles = variant === "reference" ? referenceSelectStyles : customSelectStyles;
+
+  if (variant === "reference") {
+    return (
+      <form onSubmit={handleSubmit} noValidate>
+        <div style={{ marginBottom: "14px" }} className="two-col two-col-form">
+          <div>
+            <label style={lbl}>Your Name *</label>
+            <input
+              className="inp"
+              type="text"
+              name="name"
+              placeholder="Your name"
+              value={formData.name}
+              onChange={handleChange}
+              style={{ borderColor: errors.name ? "#E53E3E" : undefined }}
+            />
+            {errors.name && <p style={{ color: "#E53E3E", fontSize: "0.75rem", marginTop: "4px" }}>{errors.name}</p>}
+          </div>
+          <div>
+            <label style={lbl}>Email *</label>
+            <input
+              className="inp"
+              type="email"
+              name="email"
+              placeholder="you@practice.ie"
+              value={formData.email}
+              onChange={handleChange}
+              style={{ borderColor: errors.email ? "#E53E3E" : undefined }}
+            />
+            {errors.email && <p style={{ color: "#E53E3E", fontSize: "0.75rem", marginTop: "4px" }}>{errors.email}</p>}
+          </div>
+        </div>
+        <div style={{ marginBottom: "14px" }} className="two-col two-col-form">
+          <div>
+            <label style={lbl}>Company (optional)</label>
+            <input className="inp" type="text" name="company" placeholder="Practice or company" value={formData.company} onChange={handleChange} />
+          </div>
+          <div>
+            <label style={lbl}>Enquiry type *</label>
+            <Select
+              options={roleOptions}
+              value={roleOptions.find((option) => option.value === formData.role) || null}
+              onChange={(selectedOption) => handleSelectChange(selectedOption, "role")}
+              placeholder="Select a type"
+              classNamePrefix="select"
+              styles={selectStyles}
+            />
+            {errors.role && <p style={{ color: "#E53E3E", fontSize: "0.75rem", marginTop: "4px" }}>{errors.role}</p>}
+          </div>
+        </div>
+        {formData.role && formData.role !== "General Enquiry" && (
+          <div style={{ marginBottom: "14px" }}>
+            <label style={lbl}>Years of Experience *</label>
+            <Select
+              options={experienceOptions}
+              value={experienceOptions.find((option) => option.value === formData.experience) || null}
+              onChange={(selectedOption) => handleSelectChange(selectedOption, "experience")}
+              placeholder="Select..."
+              classNamePrefix="select"
+              styles={selectStyles}
+            />
+            {errors.experience && <p style={{ color: "#E53E3E", fontSize: "0.75rem", marginTop: "4px" }}>{errors.experience}</p>}
+          </div>
+        )}
+        {formData.role && dynamicFields[formData.role]}
+        <div style={{ marginBottom: "24px" }}>
+          <label style={lbl}>Message *</label>
+          <textarea
+            className="inp"
+            name="message"
+            placeholder="What roles do you need? Anything else we should know?"
+            value={formData.message}
+            onChange={handleChange}
+            style={{ minHeight: "110px", resize: "vertical", borderColor: errors.message ? "#E53E3E" : undefined }}
+          />
+          {errors.message && <p style={{ color: "#E53E3E", fontSize: "0.75rem", marginTop: "4px" }}>{errors.message}</p>}
+        </div>
+        <button type="submit" className="btn-primary" disabled={loading} style={{ width: "100%", justifyContent: "center", padding: "15px" }}>
+          {loading ? "Sending..." : (
+            <>
+              Submit Enquiry <Arr />
+            </>
+          )}
+        </button>
+        {(successMessage || errorMessage) && (
+          <p style={{ fontFamily: '"Plus Jakarta Sans", "Segoe UI", system-ui, sans-serif', fontSize: "0.85rem", textAlign: "center", marginTop: "12px", color: successMessage ? "#2E5070" : "#E53E3E" }}>
+            {successMessage || errorMessage}
+          </p>
+        )}
+        <p style={{ fontFamily: '"Plus Jakarta Sans", "Segoe UI", system-ui, sans-serif', fontSize: "0.72rem", color: "#718096", textAlign: "center", marginTop: "12px" }}>
+          Ger responds personally within one business day.
+        </p>
+      </form>
+    );
+  }
 
   return (
     <section className="">
@@ -293,7 +418,7 @@ export default function DynamicContactForm({ Title, Description }) {
                 placeholder="Select a type"
                 classNamePrefix="select"
                 className={`w-full${errors.role ? ' border border-red-500 rounded-md' : ''}`}
-                styles={customSelectStyles}
+                styles={selectStyles}
               />
               {errors.role && <p className="text-red-500 text-sm mt-1">{errors.role}</p>}
             </div>
@@ -307,7 +432,7 @@ export default function DynamicContactForm({ Title, Description }) {
                   placeholder="Select..."
                   classNamePrefix="select"
                   className={`w-full${errors.experience ? ' border border-red-500 rounded-md' : ''}`}
-                  styles={customSelectStyles}
+                  styles={selectStyles}
                 />
                 {errors.experience && <p className="text-red-500 text-sm mt-1">{errors.experience}</p>}
               </div>

@@ -1,8 +1,5 @@
-import PageComponent from "./components/pageComponent";
-
+import ReferenceHome from "./components/reference/ReferenceHome";
 
 export default function Home() {
-  return (
-    <PageComponent path="/api/home-page" isHomepage={true} fetchOptions={{ next: { revalidate: 3200 } }} />    
-  )
+  return <ReferenceHome />;
 }

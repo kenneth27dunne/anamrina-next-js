@@ -51,6 +51,7 @@ const gilroy = localFont({
 });
 
 export const metadata = {
+  manifest: "/manifest.json",
   title: {
     default: "Anamrina Recruitment - Global Professional Services",
     template: "%s | Anamrina Recruitment"
