@@ -37,11 +37,13 @@ export default function ReferenceHero() {
     <div
       style={{
         background: `linear-gradient(155deg, ${C.deep} 0%, ${C.navy} 45%, ${C.navyMid} 100%)`,
-        padding: "96px 48px 88px",
+        paddingBottom: "88px",
+        paddingLeft: "48px",
+        paddingRight: "48px",
         position: "relative",
         overflow: "hidden",
       }}
-      className="hero-pad"
+      className="hero-pad hero-over-nav"
     >
       <div
         style={{

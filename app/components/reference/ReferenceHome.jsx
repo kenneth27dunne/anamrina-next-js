@@ -7,7 +7,7 @@ import ScrollReveal from "./ScrollReveal";
 export default function ReferenceHome() {
   return (
     <>
-      <header>
+      <header className="home-hero-header">
         <ReferenceHero />
       </header>
 

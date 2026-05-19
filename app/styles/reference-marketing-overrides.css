@@ -1,5 +1,9 @@
 /* Load after reference-marketing.css. Undo global base/layout rules inside the reference shell. */
 
+.anamrina-ref-site.ref-site--home {
+  background: #111c28;
+}
+
 .anamrina-ref-site .hero-h1 span,
 .anamrina-ref-site h1.hero-h1 span {
   color: #00b4d8 !important;
@@ -58,7 +62,51 @@
   height: auto !important;
   min-height: unset;
   box-shadow: none !important;
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 100;
   overflow: visible;
+}
+
+.anamrina-ref-site nav.nav-pad--overlay {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.anamrina-ref-site .home-hero-header {
+  margin: 0;
+  padding: 0;
+}
+
+.anamrina-ref-site .nav-pad--solid {
+  background: rgba(26, 46, 66, 0.98) !important;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.25) !important;
+}
+
+.anamrina-ref-site .nav-pad:not(.nav-pad--home) {
+  background: #1a2e42 !important;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+
+.anamrina-ref-site .nav-pad--home:not(.nav-pad--solid) {
+  background: transparent !important;
+  backdrop-filter: none;
+  border-bottom-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.anamrina-ref-site .hero-pad.hero-over-nav {
+  padding-top: calc(96px + var(--header-height, 67px));
+}
+
+@media (max-width: 768px) {
+  .anamrina-ref-site .hero-pad.hero-over-nav {
+    padding-top: calc(80px + var(--header-height, 64px));
+  }
 }

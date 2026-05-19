@@ -43,7 +43,7 @@ export default function Footer() {
         <div style={{ marginBottom: "44px" }} className="footer-grid">
           <div>
             <div style={{ marginBottom: "14px" }}>
-              <Image src={whiteLogo} alt="Anamrina Recruitment" width={150} height={34} style={{ height: "30px", width: "auto" }} />
+              <Image src={whiteLogo} alt="Anamrina Recruitment" width={150} height={34} style={{ height: "50px", width: "auto" }} />
             </div>
             <p style={{ fontFamily: sans, fontSize: "0.78rem", color: "#ffffff", lineHeight: 1.75, maxWidth: "240px" }}>
               Experienced Indian Accountants & Bookkeepers working remotely, backed by Irish management in India.

@@ -1,21 +1,27 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import ReactMarkdown from "react-markdown";
 import { FaPhone } from "react-icons/fa6";
 import { IoIosMail, IoIosPin } from "react-icons/io";
 import { LuAlarmClock } from "react-icons/lu";
 import { trackContactForm } from "../GoogleAnalyticsAdvanced";
+import { submitContactEmail } from "../../lib/submitContactEmail";
+import { buildContactSubmitPayload } from "../../lib/contactFormClientGuards";
+import ContactFormHoneypot from "./ContactFormHoneypot";
 
 
 export default function ContactForm({ Title, Description, isApply = false }) {
+  const formLoadedAt = useRef(Date.now());
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
+    companyWebsite: "",
   });
 
   const [loading, setLoading] = useState(false);
   const [successMessage, setSuccessMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   // Handle Input Change
   const handleChange = (e) => {
@@ -26,23 +32,21 @@ export default function ContactForm({ Title, Description, isApply = false }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
+    setSuccessMessage("");
+    setErrorMessage("");
 
-    const res = await fetch("/api/send-email", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
-    });
-
-    if (res.ok) {
-      setSuccessMessage("Message sent successfully!");
-      setFormData({ name: "", email: "", message: "" });
-      // Track successful form submission
-      trackContactForm(isApply ? 'job_application' : 'contact');
-    } else {
-      setSuccessMessage("Failed to send message. Try again later.");
-    }
-    
+    const result = await submitContactEmail(
+      buildContactSubmitPayload(formData, formLoadedAt.current)
+    );
     setLoading(false);
+
+    if (result.ok) {
+      setSuccessMessage("Message sent successfully!");
+      setFormData({ name: "", email: "", message: "", companyWebsite: "" });
+      trackContactForm(isApply ? "job_application" : "contact");
+    } else {
+      setErrorMessage(result.error);
+    }
   };
 
   return (
@@ -93,6 +97,10 @@ export default function ContactForm({ Title, Description, isApply = false }) {
                 className="w-full p-3 border rounded-md bg-gray-100 h-32"
               />
             </div>
+            <ContactFormHoneypot
+              value={formData.companyWebsite}
+              onChange={handleChange}
+            />
             <button
               type="submit"
               className="btn btn-primary mt-1"
@@ -101,6 +109,9 @@ export default function ContactForm({ Title, Description, isApply = false }) {
             </button>
             {successMessage && (
               <p className="text-center text-primary">{successMessage}</p>
+            )}
+            {errorMessage && (
+              <p className="text-center text-red-600">{errorMessage}</p>
             )}
           </form>
 

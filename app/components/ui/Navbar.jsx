@@ -3,13 +3,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useLayoutEffect, useState } from "react";
 import whiteLogo from "../../assets/Full name gradient white_300x87.png";
 import { Arr } from "../reference/Primitives";
-
-const C = {
-  navy: "#1A2E42",
-};
 
 const navPages = [
   { label: "Home", href: "/" },
@@ -25,8 +21,10 @@ function isActive(href, pathname) {
 
 export default function Navbar() {
   const pathname = usePathname();
+  const isHome = pathname === "/";
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const showSolidNav = !isHome || scrolled;
 
   const closeMenu = useCallback(() => setMobileOpen(false), []);
 
@@ -36,6 +34,10 @@ export default function Navbar() {
     window.addEventListener("scroll", fn, { passive: true });
     return () => window.removeEventListener("scroll", fn);
   }, []);
+
+  useLayoutEffect(() => {
+    window.dispatchEvent(new Event("resize"));
+  }, [scrolled, pathname]);
 
   useEffect(() => {
     setMobileOpen(false);
@@ -81,22 +83,16 @@ export default function Navbar() {
       <nav
         id="site-nav"
         style={{
-          position: "sticky",
-          top: 0,
           zIndex: 100,
           display: "block",
-          padding: scrolled ? "10px 48px" : "16px 48px",
-          background: scrolled ? "rgba(26,46,66,0.98)" : C.navy,
-          backdropFilter: "blur(12px)",
-          transition: "background 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease",
-          borderBottom: "1px solid rgba(255,255,255,0.06)",
-          boxShadow: scrolled ? "0 2px 20px rgba(0,0,0,0.25)" : "none",
+          padding: scrolled ? "10px 48px" : "14px 48px",
+          transition: "background 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease",
         }}
-        className="nav-pad"
+        className={`nav-pad${isHome ? " nav-pad--home nav-pad--overlay" : ""}${showSolidNav ? " nav-pad--solid" : ""}`}
       >
         <div className="nav-inner">
           <Link href="/" style={{ cursor: "pointer", display: "flex", alignItems: "center" }} onClick={closeMenu}>
-            <Image src={whiteLogo} alt="Anamrina Recruitment" width={160} height={36} style={{ height: "36px", width: "auto" }} priority />
+            <Image src={whiteLogo} alt="Anamrina Recruitment" width={160} height={36} style={{ height: "39px", width: "auto" }} priority />
           </Link>
 
           <ul className="nav-desktop">

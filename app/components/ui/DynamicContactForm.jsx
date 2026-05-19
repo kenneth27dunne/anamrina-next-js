@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import ReactMarkdown from "react-markdown";
 import CreatableSelect from "react-select/creatable";
 const Select = CreatableSelect;
@@ -7,6 +7,9 @@ import { FaPhone } from "react-icons/fa6";
 import { IoIosMail, IoIosPin } from "react-icons/io";
 import { LuAlarmClock } from "react-icons/lu";
 import { Arr, lbl } from "../reference/Primitives";
+import { submitContactEmail } from "../../lib/submitContactEmail";
+import { buildContactSubmitPayload } from "../../lib/contactFormClientGuards";
+import ContactFormHoneypot from "./ContactFormHoneypot";
 
 const customSelectStyles = {
   control: (provided, state) => ({
@@ -178,6 +181,7 @@ const dynamicFields = {
 };
 
 export default function DynamicContactForm({ Title, Description, variant }) {
+  const formLoadedAt = useRef(Date.now());
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -185,6 +189,7 @@ export default function DynamicContactForm({ Title, Description, variant }) {
     role: "",
     experience: "",
     message: "",
+    companyWebsite: "",
   });
   const [loading, setLoading] = useState(false);
   const [successMessage, setSuccessMessage] = useState("");
@@ -245,20 +250,26 @@ export default function DynamicContactForm({ Title, Description, variant }) {
     }
 
     setLoading(true);
-    const res = await fetch("/api/send-email", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
-    });
+    const result = await submitContactEmail(
+      buildContactSubmitPayload(formData, formLoadedAt.current)
+    );
     setLoading(false);
-    if (res.ok) {
+    if (result.ok) {
       setSuccessMessage("Message sent successfully!");
       setErrorMessage("");
-      setFormData({ name: "", email: "", company: "", role: "", experience: "", message: "" });
+      setFormData({
+        name: "",
+        email: "",
+        company: "",
+        role: "",
+        experience: "",
+        message: "",
+        companyWebsite: "",
+      });
       setErrors({});
     } else {
       setSuccessMessage("");
-      setErrorMessage("Failed to send message. Try again later.");
+      setErrorMessage(result.error);
     }
   };
 
@@ -340,6 +351,10 @@ export default function DynamicContactForm({ Title, Description, variant }) {
           />
           {errors.message && <p style={{ color: "#E53E3E", fontSize: "0.75rem", marginTop: "4px" }}>{errors.message}</p>}
         </div>
+        <ContactFormHoneypot
+          value={formData.companyWebsite}
+          onChange={handleChange}
+        />
         <button type="submit" className="btn-primary" disabled={loading} style={{ width: "100%", justifyContent: "center", padding: "15px" }}>
           {loading ? "Sending..." : (
             <>
@@ -450,7 +465,10 @@ export default function DynamicContactForm({ Title, Description, variant }) {
               />
               {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
             </div>
-            {/* Button and message inline */}
+            <ContactFormHoneypot
+              value={formData.companyWebsite}
+              onChange={handleChange}
+            />
             <div className="flex items-center gap-3">
               <button
                 type="submit"

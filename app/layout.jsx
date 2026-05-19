@@ -181,13 +181,14 @@ export default async function RootLayout({ children }) {
             function updateLayoutVars() {
               const header = document.querySelector("nav");
               const footer = document.querySelector("footer");
-              
+
               document.documentElement.style.setProperty("--header-height", (header?.offsetHeight || 0) + "px");
               document.documentElement.style.setProperty("--footer-height", (footer?.offsetHeight || 0) + "px");
             }
-            updateLayoutVars()
+            updateLayoutVars();
             window.addEventListener("load", updateLayoutVars);
             window.addEventListener("resize", updateLayoutVars);
+            window.addEventListener("scroll", updateLayoutVars, { passive: true });
           `,
         }}
       />
