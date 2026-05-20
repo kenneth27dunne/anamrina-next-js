@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useCallback, useEffect, useLayoutEffect, useState } from "react";
+import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import whiteLogo from "../../assets/Full name gradient white_300x87.png";
 import { Arr } from "../reference/Primitives";
 
@@ -25,6 +25,8 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const showSolidNav = !isHome || scrolled;
+  const navRef = useRef(null);
+  const collapsedNavHeightRef = useRef(68);
 
   const closeMenu = useCallback(() => setMobileOpen(false), []);
 
@@ -35,9 +37,26 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", fn);
   }, []);
 
+  const syncHeaderHeightVar = useCallback(() => {
+    const nav = navRef.current;
+    if (!nav || typeof document === "undefined") return;
+    let h = nav.offsetHeight;
+    if (mobileOpen && typeof window !== "undefined" && window.innerWidth <= 768) {
+      h = collapsedNavHeightRef.current;
+    } else {
+      collapsedNavHeightRef.current = h;
+    }
+    document.documentElement.style.setProperty("--header-height", `${h}px`);
+  }, [mobileOpen]);
+
   useLayoutEffect(() => {
-    window.dispatchEvent(new Event("resize"));
-  }, [scrolled, pathname]);
+    syncHeaderHeightVar();
+    const nav = navRef.current;
+    if (!nav) return;
+    const ro = new ResizeObserver(() => syncHeaderHeightVar());
+    ro.observe(nav);
+    return () => ro.disconnect();
+  }, [syncHeaderHeightVar, scrolled, pathname]);
 
   useEffect(() => {
     setMobileOpen(false);
@@ -81,6 +100,7 @@ export default function Navbar() {
       />
 
       <nav
+        ref={navRef}
         id="site-nav"
         style={{
           zIndex: 100,

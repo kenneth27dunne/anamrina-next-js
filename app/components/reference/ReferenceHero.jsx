@@ -96,7 +96,7 @@ export default function ReferenceHero() {
             }}
           >
             <span style={{ fontSize: "0.75rem" }}>🇮🇪</span>
-            <span style={{ fontFamily: sans, fontSize: "0.73rem", fontWeight: 700, color: C.cyan }}>Proud Sponsors of ProfitPro & OmniPro 2026</span>
+            <span style={{ fontFamily: sans, fontSize: "0.73rem", textAlign: "center", fontWeight: 700, color: C.cyan }}>Proud Sponsors of ProfitPro & OmniPro 2026</span>
             <span style={{ fontSize: "0.75rem" }}>🇮🇳</span>
           </div>
 

@@ -64,8 +64,10 @@ const customSelectStyles = {
 };
 
 const referenceSelectStyles = {
+  container: (provided) => ({ ...provided, width: "100%" }),
   control: (provided, state) => ({
     ...provided,
+    minWidth: 0,
     backgroundColor: "#FFFFFF",
     borderColor: state.isFocused ? "#00B4D8" : "#E2E8EF",
     borderRadius: "8px",

@@ -3,7 +3,7 @@
     --color-primary-light: color-mix(in srgb, var(--color-primary), white 20%);
     --color-primary-lighter: color-mix(in srgb, var(--color-primary), white 35%);
     --color-primary-dark: color-mix(in srgb, var(--color-primary), black 20%);
-    --header-height: 0;
+    --header-height: 68px;
     --footer-height: 0;
   }
   
